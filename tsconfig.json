@@ -15,7 +15,15 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@digipop-monorepo/digipop-frontend/core": [
+        "libs/digipop-frontend/core/src/index.ts"
+      ],
+      "@digipop-monorepo/digipop-frontend/shared": [
+        "libs/digipop-frontend/shared/src/index.ts"
+      ],
+      "@digipop-monorepo/models": ["libs/models/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

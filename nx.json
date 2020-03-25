@@ -10,5 +10,24 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "frontend": {
+      "tags": []
+    },
+    "admin": {
+      "tags": []
+    },
+    "server": {
+      "tags": []
+    },
+    "digipop-frontend-core": {
+      "tags": []
+    },
+    "digipop-frontend-shared": {
+      "tags": []
+    },
+    "models": {
+      "tags": []
+    }
+  }
 }
