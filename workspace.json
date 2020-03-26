@@ -10,7 +10,7 @@
       },
       "root": "apps/frontend",
       "sourceRoot": "apps/frontend/src",
-      "prefix": "digipop-monorepo",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -22,8 +22,11 @@
             "tsConfig": "apps/frontend/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "apps/frontend/src/favicon.ico",
-              "apps/frontend/src/assets"
+              "apps/admin/src/favicon.ico",
+              "apps/admin/src/apple-touch-icon.png",
+              "apps/admin/src/robots.txt",
+              "apps/admin/src/manifest.json",
+              "apps/admin/src/assets"
             ],
             "styles": ["apps/frontend/src/styles.scss"],
             "scripts": []
@@ -44,6 +47,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "serviceWorker": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -56,17 +60,26 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "ci": {
+              "progress": false
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "hmr": true,
+            "hmrWarning": false,
             "browserTarget": "frontend:build"
           },
           "configurations": {
             "production": {
+              "hmr": false,
               "browserTarget": "frontend:build:production"
+            },
+            "ci": {
+              "progress": false
             }
           }
         },
@@ -93,6 +106,14 @@
             "tsConfig": "apps/frontend/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "apps/frontend/src/test-setup.ts"
+          },
+          "configurations": {
+            "ci": {
+              "watch": false,
+              "ci": true,
+              "coverage": true,
+              "silent": true
+            }
           }
         }
       }
@@ -117,7 +138,13 @@
             "polyfills": "apps/admin/src/polyfills.ts",
             "tsConfig": "apps/admin/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
+            "assets": [
+              "apps/admin/src/favicon.ico",
+              "apps/admin/src/apple-touch-icon.png",
+              "apps/admin/src/robots.txt",
+              "apps/admin/src/manifest.json",
+              "apps/admin/src/assets"
+            ],
             "styles": ["apps/admin/src/styles.scss"],
             "scripts": []
           },
@@ -137,6 +164,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "serviceWorker": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -149,19 +177,28 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "ci": {
+              "progress": false
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "hmr": true,
+            "hmrWarning": false,  
             "browserTarget": "admin:build",
             "proxyConfig": "apps/admin/proxy.conf.json",
             "port": 4300
           },
           "configurations": {
             "production": {
+              "hmr": false,
               "browserTarget": "admin:build:production"
+            },
+            "ci": {
+              "progress": false
             }
           }
         },
@@ -188,6 +225,14 @@
             "tsConfig": "apps/admin/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "apps/admin/src/test-setup.ts"
+          },
+          "configurations": {
+            "ci": {
+              "watch": false,
+              "ci": true,
+              "coverage": true,
+              "silent": true
+            }
           }
         }
       }
