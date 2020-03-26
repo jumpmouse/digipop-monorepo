@@ -3,16 +3,34 @@
  * This is only a minimal backend to get started.
  */
 
-import * as express from 'express';
+const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
+const PORT = process.env.PORT || process.env.APP_PORT || 80;
 
-app.get('/api', (req, res) => {
-  res.send({ message: 'Welcome to server!' });
+app.get(
+  '*.*',
+  express.static(__dirname, {
+    maxAge: '1m'
+  })
+);
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.get('/api/*', (req: any, res: any) => {
+  res.send({ data: `data recieved: api get` });
 });
 
-const port = process.env.port || 3333;
-const server = app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}/api`);
+app.post('/api/*', (req: any, res: any) => {
+  res.send({ data: `data recieved: ${req.body.param}` });
 });
-server.on('error', console.error);
+
+app.route('*').get((req: any, res: any) => {
+  res.sendFile(__dirname + '/index.html');
+});
+
+app.listen(PORT, () => {
+  console.log(`Node Express server listening on  port ${PORT}`);
+});

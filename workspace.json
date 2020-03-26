@@ -15,7 +15,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/frontend",
+            "outputPath": "dist",
             "index": "apps/frontend/src/index.html",
             "main": "apps/frontend/src/main.ts",
             "polyfills": "apps/frontend/src/polyfills.ts",
@@ -111,7 +111,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/admin",
+            "outputPath": "dist/admin",
             "index": "apps/admin/src/index.html",
             "main": "apps/admin/src/main.ts",
             "polyfills": "apps/admin/src/polyfills.ts",
@@ -156,7 +156,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "admin:build",
-            "proxyConfig": "apps/admin/proxy.conf.json"
+            "proxyConfig": "apps/admin/proxy.conf.json",
+            "port": 4300
           },
           "configurations": {
             "production": {
@@ -199,12 +200,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@nrwl/node:build",
+          "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "outputPath": "dist/apps/server",
-            "main": "apps/server/src/main.ts",
-            "tsConfig": "apps/server/tsconfig.app.json",
-            "assets": ["apps/server/src/assets"]
+            "commands": [
+              {
+                "command": "npm run build:production"
+              }
+            ],
+            "cwd": "apps/server",
+            "parallel": false
           },
           "configurations": {
             "production": {
@@ -218,12 +222,6 @@
                 }
               ]
             }
-          }
-        },
-        "serve": {
-          "builder": "@nrwl/node:execute",
-          "options": {
-            "buildTarget": "server:build"
           }
         },
         "lint": {

@@ -4,10 +4,12 @@
 /dist
 /tmp
 /out-tsc
+/apps/*/dist
+/apps/server/api
 
 # dependencies
 /node_modules
-
+/**/node_modules
 # IDEs and editors
 /.idea
 .project
