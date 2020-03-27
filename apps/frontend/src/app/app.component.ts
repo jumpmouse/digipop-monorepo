@@ -4,7 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { filter } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
-import { Logger, I18nService } from '@app/core';
+import { Logger, I18nService } from '@digipop/core';
 
 const log = new Logger('App');
 

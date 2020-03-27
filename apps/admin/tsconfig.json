@@ -19,7 +19,14 @@
       "@app/*": ["src/app/*"],
       "@env/*": ["src/environments/*"],
       "@translations/*": ["src/translations/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@digipop/core": [
+        "../../libs/digipop-frontend/core/src/index.ts"
+      ],
+      "@digipop/shared": [
+        "../../libs/digipop-frontend/shared/src/index.ts"
+      ],
+      "@digipop-monorepo/models": ["../../libs/models/src/index.ts"]
     }
   },
   "angularCompilerOptions": {

@@ -5,7 +5,7 @@ import {
   AuthenticationService,
   CredentialsService,
   I18nService
-} from '@app/core';
+} from '@digipop/core';
 
 @Component({
   selector: 'digipop-header',
