@@ -119,15 +119,15 @@
       }
     },
     "admin": {
+      "root": "apps/admin",
+      "sourceRoot": "apps/admin/src",
       "projectType": "application",
+      "prefix": "digipop",
       "schematics": {
         "@nrwl/angular:component": {
           "style": "scss"
         }
       },
-      "root": "apps/admin",
-      "sourceRoot": "apps/admin/src",
-      "prefix": "digipop-monorepo",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -135,9 +135,8 @@
             "outputPath": "dist/admin",
             "index": "apps/admin/src/index.html",
             "main": "apps/admin/src/main.ts",
-            "polyfills": "apps/admin/src/polyfills.ts",
             "tsConfig": "apps/admin/tsconfig.app.json",
-            "aot": true,
+            "polyfills": "apps/admin/src/polyfills.ts",
             "assets": [
               "apps/admin/src/favicon.ico",
               "apps/admin/src/apple-touch-icon.png",
@@ -145,26 +144,20 @@
               "apps/admin/src/manifest.json",
               "apps/admin/src/assets"
             ],
-            "styles": ["apps/admin/src/styles.scss"],
+            "styles": ["apps/admin/src/main.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/admin/src/environments/environment.ts",
-                  "with": "apps/admin/src/environments/environment.prod.ts"
-                }
-              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "serviceWorker": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -175,6 +168,13 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
+                }
+              ],
+              "serviceWorker": true,
+              "fileReplacements": [
+                {
+                  "replace": "apps/admin/src/environments/environment.ts",
+                  "with": "apps/admin/src/environments/environment.prod.ts"
                 }
               ]
             },
@@ -187,7 +187,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "hmr": true,
-            "hmrWarning": false,  
+            "hmrWarning": false,
             "browserTarget": "admin:build",
             "proxyConfig": "apps/admin/proxy.conf.json",
             "port": 4300

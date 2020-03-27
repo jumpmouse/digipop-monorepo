@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <form class="edit-form alert alert-dark mt-3" #editCourseForm="ngForm" (ngSubmit)="onSubmit()">
+    <h2 class="alert-heading">Izmena/dodavanje oblasti</h2>
+    <ng-container *ngFor="let field of fields; let i = index">
+      <ng-container *ngIf="labels[i].name !== 'id'">
+        <div class="h5">{{ labels[i].name }}<ng-container *ngIf="labels[i].required">*</ng-container>:</div>
+        <textarea
+          rows="4"
+          [attr.required]="labels[i].required ? 'required' : null"
+          [name]="field"
+          [(ngModel)]="content[field]"
+          class="edit-form-textarea"
+        ></textarea>
+      </ng-container>
+    </ng-container>
+    <br />
+    <br />
+    <button type="submit" class="btn btn-primary" [disabled]="editCourseForm.form.invalid">Submit</button>
+  </form>
+</div>
