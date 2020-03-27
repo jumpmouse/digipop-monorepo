@@ -17,7 +17,7 @@
     "l:all": "nx workspace-lint && nx lint frontend && nx lint admin && nx lint server",
     "l:fix:all": "nx workspace-lint && nx lint frontend --fix && nx lint admin --fix && nx lint server --fix",
     "t:all": "nx test frontend && nx test admin && nx test server",
-    "f:all": "npm run nx format:write --all",
+    "f:all": "nx format:write --all",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
     "affected:build": "nx affected:build",
