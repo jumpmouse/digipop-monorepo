@@ -2,15 +2,15 @@
   "version": 1,
   "projects": {
     "frontend": {
+      "root": "apps/frontend",
+      "sourceRoot": "apps/frontend/src",
       "projectType": "application",
+      "prefix": "app",
       "schematics": {
         "@nrwl/angular:component": {
           "style": "scss"
         }
       },
-      "root": "apps/frontend",
-      "sourceRoot": "apps/frontend/src",
-      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -18,36 +18,29 @@
             "outputPath": "dist",
             "index": "apps/frontend/src/index.html",
             "main": "apps/frontend/src/main.ts",
-            "polyfills": "apps/frontend/src/polyfills.ts",
             "tsConfig": "apps/frontend/tsconfig.app.json",
-            "aot": true,
+            "polyfills": "apps/frontend/src/polyfills.ts",
             "assets": [
-              "apps/admin/src/favicon.ico",
-              "apps/admin/src/apple-touch-icon.png",
-              "apps/admin/src/robots.txt",
-              "apps/admin/src/manifest.json",
-              "apps/admin/src/assets"
+              "apps/frontend/src/favicon.ico",
+              "apps/frontend/src/apple-touch-icon.png",
+              "apps/frontend/src/robots.txt",
+              "apps/frontend/src/manifest.json",
+              "apps/frontend/src/assets"
             ],
-            "styles": ["apps/frontend/src/styles.scss"],
+            "styles": ["apps/frontend/src/main.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/frontend/src/environments/environment.ts",
-                  "with": "apps/frontend/src/environments/environment.prod.ts"
-                }
-              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "serviceWorker": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -58,6 +51,13 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
+                }
+              ],
+              "serviceWorker": true,
+              "fileReplacements": [
+                {
+                  "replace": "apps/frontend/src/environments/environment.ts",
+                  "with": "apps/frontend/src/environments/environment.prod.ts"
                 }
               ]
             },
