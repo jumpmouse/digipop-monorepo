@@ -9,7 +9,13 @@ import { ShellComponent } from './shell.component';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  imports: [CommonModule, TranslateModule, NgbModule, NavbarModule, RouterModule],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    NgbModule,
+    NavbarModule,
+    RouterModule
+  ],
   declarations: [HeaderComponent, ShellComponent]
 })
 export class ShellModule {}

@@ -31,7 +31,10 @@ export class AddEditSectionComponent implements OnInit {
     private scriptContentService: ScriptContentService
   ) {}
   ngOnInit(): void {
-    combineLatest([this.route.params, this.scriptContentService.scriptContent]).subscribe(([param, script]) => {
+    combineLatest([
+      this.route.params,
+      this.scriptContentService.scriptContent
+    ]).subscribe(([param, script]) => {
       const courseMetaData = param.courseName.split('_');
       this.script = script;
       this.courseLink = param.courseName;
@@ -43,7 +46,8 @@ export class AddEditSectionComponent implements OnInit {
         this.sectionLink = param.sectionName;
         this.sectionId = sectionMetaData[0];
         this.sectionName = sectionMetaData[1];
-        this.currentSection = script.predmeti[this.courseId].oblasti[this.sectionId];
+        this.currentSection =
+          script.predmeti[this.courseId].oblasti[this.sectionId];
       }
     });
 
@@ -63,12 +67,14 @@ export class AddEditSectionComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const fileName = this.getId() + '_' + this.utils.sanitizeFileName(this.content.naziv);
+    const fileName =
+      this.getId() + '_' + this.utils.sanitizeFileName(this.content.naziv);
 
     const sectionForUpdate: Oblast = Object.assign({}, this.content, {
       link: (this.currentSection && this.currentSection.link) || fileName,
       id: (this.currentSection && this.currentSection.id) || this.getId(),
-      programske_celine: (this.currentSection && this.currentSection.programske_celine) || {}
+      programske_celine:
+        (this.currentSection && this.currentSection.programske_celine) || {}
     });
 
     this.scriptContentService.addUpdateSection(sectionForUpdate);

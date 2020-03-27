@@ -1,5 +1,8 @@
 <div class="projects-list d-flex flex-wrap fadeIn animated">
-  <div class="project" *ngFor="let project of projects; let i = index; trackBy: trackByFunction">
+  <div
+    class="project"
+    *ngFor="let project of projects; let i = index; trackBy: trackByFunction"
+  >
     <app-project
       [index]="i"
       [project]="project"

@@ -80,7 +80,10 @@ export class UtilsService {
 
   public downloadDocument(filename: string, text: string): void {
     const downloadElement = document.createElement('a');
-    downloadElement.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    downloadElement.setAttribute(
+      'href',
+      'data:text/plain;charset=utf-8,' + encodeURIComponent(text)
+    );
     downloadElement.setAttribute('download', filename);
 
     if (document.createEvent) {
@@ -92,7 +95,11 @@ export class UtilsService {
     }
   }
 
-  private sanitizeString(s: string, customRegex?: RegExp, customLettersObj?: { [key: string]: string }) {
+  private sanitizeString(
+    s: string,
+    customRegex?: RegExp,
+    customLettersObj?: { [key: string]: string }
+  ) {
     const regex = customRegex || this.replaceStringRegex;
     const lettersObj = customLettersObj || this.replaceStrings;
     const string = s

@@ -17,7 +17,9 @@ import { CourseSectionModule } from './course-section/course-section.module';
 @NgModule({
   imports: [
     BrowserModule,
-    ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('./ngsw-worker.js', {
+      enabled: environment.production
+    }),
     TranslateModule.forRoot(),
     CoreModule,
     SharedModule,

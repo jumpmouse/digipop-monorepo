@@ -15,7 +15,10 @@ export class ContentEditingComponent implements OnInit {
   public content = '';
   public title = 'xy-oblast';
 
-  constructor(private utilsService: UtilsService, private route: ActivatedRoute) {}
+  constructor(
+    private utilsService: UtilsService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.route.params.subscribe(param => {
@@ -27,7 +30,10 @@ export class ContentEditingComponent implements OnInit {
   public onReady(editor: any) {
     editor.ui
       .getEditableElement()
-      .parentElement.insertBefore(editor.ui.view.toolbar.element, editor.ui.getEditableElement());
+      .parentElement.insertBefore(
+        editor.ui.view.toolbar.element,
+        editor.ui.getEditableElement()
+      );
   }
 
   public onSubmit(): void {

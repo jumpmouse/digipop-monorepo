@@ -9,7 +9,13 @@ import { ContentManagementComponent } from './home.component';
 import { QuoteService } from './quote.service';
 
 @NgModule({
-  imports: [CommonModule, TranslateModule, CoreModule, SharedModule, HomeRoutingModule],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    CoreModule,
+    SharedModule,
+    HomeRoutingModule
+  ],
   declarations: [ContentManagementComponent]
 })
 export class HomeModule {}

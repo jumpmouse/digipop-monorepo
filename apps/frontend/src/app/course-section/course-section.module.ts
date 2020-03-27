@@ -7,7 +7,12 @@ import { CourseSectionComponent } from './course-section.component';
 import { SharedModule } from '@app/shared';
 
 @NgModule({
-  imports: [CommonModule, SharedModule, TranslateModule, CourseSectionRoutingModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    TranslateModule,
+    CourseSectionRoutingModule
+  ],
   declarations: [CourseSectionComponent]
 })
 export class CourseSectionModule {}

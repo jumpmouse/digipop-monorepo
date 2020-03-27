@@ -6,7 +6,13 @@ import { Shell } from '@app/shell/shell.service';
 import { AboutComponent } from './about.component';
 
 const routes: Routes = [
-  Shell.childRoutes([{ path: 'o-skripti', component: AboutComponent, data: { title: extract('o-skripti') } }])
+  Shell.childRoutes([
+    {
+      path: 'o-skripti',
+      component: AboutComponent,
+      data: { title: extract('o-skripti') }
+    }
+  ])
 ];
 
 @NgModule({

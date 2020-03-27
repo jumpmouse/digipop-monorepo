@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 import { environment } from '@env/environment';
-import { Predmet, Oblast, ContentMetaData, Skripta } from '@app/models/skripta.model';
+import {
+  Predmet,
+  Oblast,
+  ContentMetaData,
+  Skripta
+} from '@app/models/skripta.model';
 import { ActivatedRoute } from '@angular/router';
 import { Project } from '@app/models/project.model';
 import { ProjectsService } from '@app/shared/services/projects.service';
@@ -28,7 +33,10 @@ export class SectionManagementComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    combineLatest([this.route.params, this.scriptContentService.scriptContent]).subscribe(([param, script]) => {
+    combineLatest([
+      this.route.params,
+      this.scriptContentService.scriptContent
+    ]).subscribe(([param, script]) => {
       const courseMetaData = param.courseName.split('_');
       this.courseLink = param.courseName;
       this.courseId = courseMetaData[0];
@@ -39,7 +47,9 @@ export class SectionManagementComponent implements OnInit {
 
   prepareProjects(courseId: string, script: Skripta): Project[] {
     this.course = this.prepareCourse(script.predmeti[courseId]);
-    const oblasti: Project[] = Object.entries(script.predmeti[courseId].oblasti).map(([id, oblast]: [string, Oblast]) =>
+    const oblasti: Project[] = Object.entries(
+      script.predmeti[courseId].oblasti
+    ).map(([id, oblast]: [string, Oblast]) =>
       this.projectsService.prepareProjectFromOblast(oblast, this.courseLink)
     );
     return oblasti;
