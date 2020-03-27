@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <form class="mt-3" #articleForm="ngForm" (ngSubmit)="onSubmit()">
+    <ckeditor
+      [config]="config"
+      [editor]="Editor"
+      required
+      name="text"
+      [(ngModel)]="content"
+      data=""
+      (ready)="onReady($event)"
+    ></ckeditor>
+    <button type="submit" class="btn btn-primary" [disabled]="articleForm.invalid">Submit</button>
+  </form>
+</div>

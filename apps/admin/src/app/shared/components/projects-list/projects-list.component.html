@@ -1,0 +1,11 @@
+<div class="projects-list d-flex flex-wrap fadeIn animated">
+  <div class="project" *ngFor="let project of projects; let i = index; trackBy: trackByFunction">
+    <digipop-editable-project
+      [project]="project"
+      [projectType]="projectType"
+      [editable]="editable"
+      (deleted)="onProjectDelete($event)"
+      (edited)="onProjectEdit($event)"
+    ></digipop-editable-project>
+  </div>
+</div>
