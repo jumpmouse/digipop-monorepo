@@ -2,15 +2,15 @@
   "version": 1,
   "projects": {
     "frontend": {
+      "root": "apps/frontend",
+      "sourceRoot": "apps/frontend/src",
       "projectType": "application",
+      "prefix": "app",
       "schematics": {
         "@nrwl/angular:component": {
           "style": "scss"
         }
       },
-      "root": "apps/frontend",
-      "sourceRoot": "apps/frontend/src",
-      "prefix": "digipop-monorepo",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -18,29 +18,26 @@
             "outputPath": "dist",
             "index": "apps/frontend/src/index.html",
             "main": "apps/frontend/src/main.ts",
-            "polyfills": "apps/frontend/src/polyfills.ts",
             "tsConfig": "apps/frontend/tsconfig.app.json",
-            "aot": true,
+            "polyfills": "apps/frontend/src/polyfills.ts",
             "assets": [
               "apps/frontend/src/favicon.ico",
+              "apps/frontend/src/apple-touch-icon.png",
+              "apps/frontend/src/robots.txt",
+              "apps/frontend/src/manifest.json",
               "apps/frontend/src/assets"
             ],
-            "styles": ["apps/frontend/src/styles.scss"],
+            "styles": ["apps/frontend/src/main.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/frontend/src/environments/environment.ts",
-                  "with": "apps/frontend/src/environments/environment.prod.ts"
-                }
-              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -55,18 +52,34 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
+              ],
+              "serviceWorker": true,
+              "fileReplacements": [
+                {
+                  "replace": "apps/frontend/src/environments/environment.ts",
+                  "with": "apps/frontend/src/environments/environment.prod.ts"
+                }
               ]
+            },
+            "ci": {
+              "progress": false
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "hmr": true,
+            "hmrWarning": false,
             "browserTarget": "frontend:build"
           },
           "configurations": {
             "production": {
+              "hmr": false,
               "browserTarget": "frontend:build:production"
+            },
+            "ci": {
+              "progress": false
             }
           }
         },
@@ -93,6 +106,14 @@
             "tsConfig": "apps/frontend/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "apps/frontend/src/test-setup.ts"
+          },
+          "configurations": {
+            "ci": {
+              "watch": false,
+              "ci": true,
+              "coverage": true,
+              "silent": true
+            }
           }
         }
       }
@@ -117,7 +138,13 @@
             "polyfills": "apps/admin/src/polyfills.ts",
             "tsConfig": "apps/admin/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
+            "assets": [
+              "apps/admin/src/favicon.ico",
+              "apps/admin/src/apple-touch-icon.png",
+              "apps/admin/src/robots.txt",
+              "apps/admin/src/manifest.json",
+              "apps/admin/src/assets"
+            ],
             "styles": ["apps/admin/src/styles.scss"],
             "scripts": []
           },
@@ -137,6 +164,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "serviceWorker": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -149,19 +177,28 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "ci": {
+              "progress": false
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "hmr": true,
+            "hmrWarning": false,  
             "browserTarget": "admin:build",
             "proxyConfig": "apps/admin/proxy.conf.json",
             "port": 4300
           },
           "configurations": {
             "production": {
+              "hmr": false,
               "browserTarget": "admin:build:production"
+            },
+            "ci": {
+              "progress": false
             }
           }
         },
@@ -188,6 +225,14 @@
             "tsConfig": "apps/admin/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "apps/admin/src/test-setup.ts"
+          },
+          "configurations": {
+            "ci": {
+              "watch": false,
+              "ci": true,
+              "coverage": true,
+              "silent": true
+            }
           }
         }
       }

@@ -1,6 +1,6 @@
 {
   "name": "digipop-monorepo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "nx": "nx",
@@ -42,6 +42,7 @@
     "@angular/compiler": "9.0.0",
     "@angular/core": "9.0.0",
     "@angular/forms": "9.0.0",
+    "@angular/localize": "^9.1.0",
     "@angular/platform-browser": "9.0.0",
     "@angular/platform-browser-dynamic": "9.0.0",
     "@angular/router": "9.0.0",
