@@ -7,7 +7,7 @@ import { ScriptContentService } from '@app/shared/services/script-content.servic
 import { UtilsService } from '@app/shared/services/utils.service';
 
 @Component({
-  selector: 'digipop-add-edit-section',
+  selector: 'digipop-admin-add-edit-section',
   templateUrl: './add-edit-section.component.html',
   styleUrls: ['./add-edit-section.component.scss']
 })

@@ -5,7 +5,7 @@ import { ProjectsService } from '@app/shared/services/projects.service';
 import { ScriptContentService } from '@app/shared/services/script-content.service';
 
 @Component({
-  selector: 'digipop-course-management',
+  selector: 'digipop-admin-course-management',
   templateUrl: './course-management.component.html',
   styleUrls: ['./course-management.component.scss']
 })

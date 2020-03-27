@@ -10,7 +10,7 @@ import { Project } from '@app/models/project.model';
 import { DefaultImg } from '@assets/default-img.const';
 
 @Component({
-  selector: 'digipop-editable-project',
+  selector: 'digipop-admin-editable-project',
   templateUrl: './editable-project.component.html',
   styleUrls: ['./editable-project.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
