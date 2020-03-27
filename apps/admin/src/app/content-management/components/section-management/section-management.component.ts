@@ -6,9 +6,9 @@ import {
   Oblast,
   ContentMetaData,
   Skripta
-} from '@app/models/skripta.model';
+} from '@digipop/models';
 import { ActivatedRoute } from '@angular/router';
-import { Project } from '@app/models/project.model';
+import { Project } from '@digipop/models';
 import { ProjectsService } from '@digipop/shared';
 import { ScriptContentService } from '@digipop/shared';
 import { combineLatest } from 'rxjs';

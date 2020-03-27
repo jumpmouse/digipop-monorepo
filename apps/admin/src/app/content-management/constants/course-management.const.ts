@@ -3,7 +3,7 @@ import {
   OblastForEditing,
   ProgramskaCelinaForEditing,
   SkriptaForEditing
-} from '@app/models/skripta.model';
+} from '@digipop/models';
 
 export const EmptyScriptForEditing: SkriptaForEditing = {
   naslov: 'true',

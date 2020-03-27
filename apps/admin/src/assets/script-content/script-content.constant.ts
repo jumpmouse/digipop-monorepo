@@ -1,5 +1,5 @@
 // tslint:disable: max-line-length
-import { Skripta } from '@app/models/skripta.model';
+import { Skripta } from '@digipop/models';
 
 export const SadrzajSkripte: Skripta = {
   naslov: 'E-SKRIPTA',
