@@ -4,7 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { CourseRoutingModule } from './course-routing.module';
 import { CourseComponent } from './course.component';
-import { SharedModule } from '@app/shared';
+import { SharedModule } from '@digipop/shared';
 
 @NgModule({
   imports: [CommonModule, SharedModule, TranslateModule, CourseRoutingModule],

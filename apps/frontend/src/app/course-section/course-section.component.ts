@@ -8,7 +8,7 @@ import {
   ProgramskaCelina
 } from '@digipop/models';
 import { ActivatedRoute } from '@angular/router';
-import { ScriptContentService } from '@app/shared/services/script-content.service';
+import { ScriptContentService } from '@digipop/shared';
 import { combineLatest } from 'rxjs';
 
 @Component({

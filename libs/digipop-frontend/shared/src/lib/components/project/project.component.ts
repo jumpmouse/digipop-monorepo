@@ -7,29 +7,27 @@ import {
   ChangeDetectionStrategy
 } from '@angular/core';
 import { Project } from '@digipop/models';
-import { DefaultImg } from '@assets/default-img.const';
+import { DefaultImg } from '../../assets/default-img.const';
 
 @Component({
-  selector: 'digipop-admin-editable-project',
-  templateUrl: './editable-project.component.html',
-  styleUrls: ['./editable-project.component.scss'],
+  selector: 'digipop-shared-project',
+  templateUrl: './project.component.html',
+  styleUrls: ['./project.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EditableProjectComponent implements OnInit {
-  @Input() projectType: string;
+export class ProjectComponent implements OnInit {
   @Input() project: Project;
+  @Input() projectType: string;
   @Input() editable = true;
+  @Input() index: number;
   @Output() deleted = new EventEmitter<Project>();
   @Output() edited = new EventEmitter<Project>();
 
   public defaultImg: string = DefaultImg;
-  public link: string;
 
   constructor() {}
 
-  ngOnInit() {
-    this.setupLink();
-  }
+  ngOnInit() {}
 
   onDelete() {
     this.deleted.emit(this.project);
@@ -37,12 +35,5 @@ export class EditableProjectComponent implements OnInit {
 
   onEdit() {
     this.edited.emit(this.project);
-  }
-
-  private setupLink(): void {
-    this.link =
-      this.projectType === 'course'
-        ? '/' + this.project.link
-        : '/' + this.project.link + '/edit';
   }
 }

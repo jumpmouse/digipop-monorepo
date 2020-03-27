@@ -9,12 +9,12 @@ import {
 import { Project } from '@digipop/models';
 
 @Component({
-  selector: 'digipop-projects-list',
-  templateUrl: './projects-list.component.html',
-  styleUrls: ['./projects-list.component.scss'],
+  selector: 'digipop-shared-editable-projects-list',
+  templateUrl: './editable-projects-list.component.html',
+  styleUrls: ['./editable-projects-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProjectsListComponent implements OnInit {
+export class EditableProjectsListComponent implements OnInit {
   @Input() editingMode = false;
   @Input() projectType = 'course';
   @Input() projects: Project[];

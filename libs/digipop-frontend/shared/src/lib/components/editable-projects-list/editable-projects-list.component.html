@@ -3,13 +3,12 @@
     class="project"
     *ngFor="let project of projects; let i = index; trackBy: trackByFunction"
   >
-    <digipop-project
-      [index]="i"
+    <digipop-shared-editable-project
       [project]="project"
       [projectType]="projectType"
       [editable]="editable"
       (deleted)="onProjectDelete($event)"
       (edited)="onProjectEdit($event)"
-    ></digipop-project>
+    ></digipop-shared-editable-project>
   </div>
 </div>

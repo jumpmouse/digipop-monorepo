@@ -295,7 +295,7 @@
       "projectType": "library",
       "root": "libs/digipop-frontend/core",
       "sourceRoot": "libs/digipop-frontend/core/src",
-      "prefix": "digipop-monorepo",
+      "prefix": "digipop-core",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -327,7 +327,7 @@
       "projectType": "library",
       "root": "libs/digipop-frontend/shared",
       "sourceRoot": "libs/digipop-frontend/shared/src",
-      "prefix": "digipop-monorepo",
+      "prefix": "digipop-shared",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",

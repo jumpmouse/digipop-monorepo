@@ -1,11 +1,6 @@
 import { Injectable } from '@angular/core';
-import {
-  Skripta,
-  Predmet,
-  OblastForEditing,
-  Oblast
-} from '@digipop/models';
-import { SadrzajSkripte } from '@assets/script-content/script-content.constant';
+import { Skripta, Predmet, OblastForEditing, Oblast } from '@digipop/models';
+import { SadrzajSkripte } from '../assets/script-content.constant';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { UtilsService } from './utils.service';
 

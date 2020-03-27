@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { EmptyCourseForEditing } from '@app/content-management/constants/course-management.const';
 import { ActivatedRoute } from '@angular/router';
 import { combineLatest } from 'rxjs';
-import { ScriptContentService } from '@app/shared/services/script-content.service';
+import { ScriptContentService } from '@digipop/shared';
 import { Predmet, Skripta } from '@digipop/models';
-import { UtilsService } from '@app/shared/services/utils.service';
+import { UtilsService } from '@digipop/shared';
 
 @Component({
   selector: 'digipop-admin-add-edit-course',
