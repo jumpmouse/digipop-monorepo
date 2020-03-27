@@ -94,5 +94,11 @@
     "tslint": "~6.0.0",
     "tslint-config-prettier": "^1.14.0",
     "typescript": "~3.7.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run f:all && npm run l:all",
+      "pre-push": "npm run t:all"
+    }
   }
 }
