@@ -1,0 +1,52 @@
+/*
+ * Global application theme.
+ * Framework overrides and customization goes here.
+ */
+.jumbotron {
+  margin-top: 15px;
+  padding: 2rem;
+  //   background-color: #f8f9fa;
+}
+
+body .ck.ck-content {
+  border: 1px solid darkgrey;
+  height: calc(100vh - 170px);
+  margin-bottom: 8px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover {
+  transition: opacity 0.1s ease-out;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+/* stylelint-disable-next-line selector-no-qualifying-type */
+.accordion .card-header button.btn-link {
+  font-size: 1.25em;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.edit-form {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.edit-form-textarea {
+  width: 100%;
+  min-width: 400px;
+}
+
+@media (min-width: 1200px) {
+  .project {
+    /* stylelint-disable-next-line declaration-no-important */
+    width: calc(25% - 2rem) !important;
+  }
+}
