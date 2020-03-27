@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { extract } from '@app/core';
+import { extract } from '@digipop/core';
 import { ContentManagementComponent } from './home.component';
 import { Shell } from '@app/shell/shell.service';
 
