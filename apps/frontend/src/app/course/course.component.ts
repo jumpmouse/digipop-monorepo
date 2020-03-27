@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { environment } from '@env/environment';
-import {
-  Predmet,
-  Oblast,
-  ContentMetaData,
-  Skripta
-} from '@digipop/models';
+import { Predmet, Oblast, ContentMetaData, Skripta } from '@digipop/models';
 import { ActivatedRoute } from '@angular/router';
 import { Project } from '@digipop/models';
 import { ProjectsService } from '@app/shared/services/projects.service';

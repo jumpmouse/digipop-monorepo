@@ -17,6 +17,12 @@ import { ProjectComponent } from './components/project/project.component';
     ProjectsListComponent,
     EditableProjectComponent
   ],
-  exports: [LoaderComponent, ProjectsListComponent, EditableProjectComponent, EditableProjectsListComponent, ProjectComponent]
+  exports: [
+    LoaderComponent,
+    ProjectsListComponent,
+    EditableProjectComponent,
+    EditableProjectsListComponent,
+    ProjectComponent
+  ]
 })
 export class SharedModule {}
