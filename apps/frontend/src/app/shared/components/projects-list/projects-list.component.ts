@@ -6,7 +6,7 @@ import {
   Output,
   ChangeDetectionStrategy
 } from '@angular/core';
-import { Project } from '@app/models/project.model';
+import { Project } from '@digipop/models';
 
 @Component({
   selector: 'digipop-projects-list',

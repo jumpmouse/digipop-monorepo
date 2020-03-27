@@ -26,7 +26,7 @@
       "@digipop/shared": [
         "../../libs/digipop-frontend/shared/src/index.ts"
       ],
-      "@digipop-monorepo/models": ["../../libs/models/src/index.ts"]
+      "@digipop/models": ["../../libs/models/src/index.ts"]
     }
   },
   "angularCompilerOptions": {

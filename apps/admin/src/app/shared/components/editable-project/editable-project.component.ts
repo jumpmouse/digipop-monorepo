@@ -6,7 +6,7 @@ import {
   EventEmitter,
   ChangeDetectionStrategy
 } from '@angular/core';
-import { Project } from '@app/models/project.model';
+import { Project } from '@digipop/models';
 import { DefaultImg } from '@assets/default-img.const';
 
 @Component({

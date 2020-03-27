@@ -6,7 +6,7 @@ import {
   Skripta,
   Oblast,
   ProgramskaCelina
-} from '@app/models/skripta.model';
+} from '@digipop/models';
 import { ActivatedRoute } from '@angular/router';
 import { ScriptContentService } from '@app/shared/services/script-content.service';
 import { combineLatest } from 'rxjs';

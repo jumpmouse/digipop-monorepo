@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from '@app/models/project.model';
-import { Predmet, ContentMetaData, Skripta } from '@app/models/skripta.model';
+import { Project } from '@digipop/models';
+import { Predmet, ContentMetaData, Skripta } from '@digipop/models';
 import { ProjectsService } from '@app/shared/services/projects.service';
 import { ScriptContentService } from '@app/shared/services/script-content.service';
 

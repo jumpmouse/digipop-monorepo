@@ -3,7 +3,7 @@ import { EmptyCourseForEditing } from '@app/content-management/constants/course-
 import { ActivatedRoute } from '@angular/router';
 import { combineLatest } from 'rxjs';
 import { ScriptContentService } from '@app/shared/services/script-content.service';
-import { Predmet, Skripta } from '@app/models/skripta.model';
+import { Predmet, Skripta } from '@digipop/models';
 import { UtilsService } from '@app/shared/services/utils.service';
 
 @Component({
