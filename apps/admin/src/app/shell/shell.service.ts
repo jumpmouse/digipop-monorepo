@@ -1,6 +1,6 @@
 import { Routes, Route } from '@angular/router';
 
-import { AuthenticationGuard } from '@app/core';
+import { AuthenticationGuard } from '@digipop/core';
 import { ShellComponent } from './shell.component';
 
 /**
