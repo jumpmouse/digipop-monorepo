@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmptySectionForEditing } from '@app/content-management/constants/course-management.const';
 import { ActivatedRoute } from '@angular/router';
-import { Oblast, Skripta, Predmet } from '@app/models/skripta.model';
+import { Oblast, Skripta, Predmet } from '@digipop/models';
 import { combineLatest } from 'rxjs';
 import { ScriptContentService } from '@app/shared/services/script-content.service';
 import { UtilsService } from '@app/shared/services/utils.service';
