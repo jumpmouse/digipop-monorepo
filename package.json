@@ -18,6 +18,7 @@
     "l:fix:all": "nx workspace-lint && nx lint frontend --fix && nx lint admin --fix && nx lint server --fix",
     "t:all": "nx test frontend && nx test admin && nx test server",
     "f:all": "nx format:write --all",
+    "f:staged": "npm run format:changed -- --staged --verbose",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
     "affected:build": "nx affected:build",
@@ -29,6 +30,7 @@
     "format": "nx format:write",
     "format:write": "nx format:write",
     "format:check": "nx format:check",
+    "format:changed": "pretty-quick",
     "update": "nx migrate latest",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
@@ -88,6 +90,7 @@
     "jest-preset-angular": "8.0.0",
     "nodemon": "^2.0.2",
     "prettier": "1.19.1",
+    "pretty-quick": "^2.0.1",
     "rimraf": "^3.0.2",
     "ts-jest": "24.0.0",
     "ts-node": "~7.0.0",
@@ -97,8 +100,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run f:all && npm run l:all",
-      "pre-push": "npm run t:all"
+      "pre-commit": "npm run f:staged && npm run affected:lint",
+      "pre-push": "npm run affected:test"
     }
   }
 }
