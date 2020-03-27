@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Predmet, Oblast, ProgramskaCelina } from '@app/models/skripta.model';
-import { Project, SimpleLinkObject } from '@app/models/project.model';
+import { Predmet, Oblast, ProgramskaCelina } from '@digipop/models';
+import { Project, SimpleLinkObject } from '@digipop/models';
 import { UtilsService } from './utils.service';
 
 @Injectable({

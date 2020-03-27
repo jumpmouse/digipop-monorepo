@@ -4,7 +4,7 @@ import {
   Predmet,
   OblastForEditing,
   Oblast
-} from '@app/models/skripta.model';
+} from '@digipop/models';
 import { SadrzajSkripte } from '@assets/script-content/script-content.constant';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { UtilsService } from './utils.service';
