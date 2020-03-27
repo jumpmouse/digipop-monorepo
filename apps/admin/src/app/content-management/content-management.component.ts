@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 @Component({
-  selector: 'digipop-course-management',
+  selector: 'digipop-admin-course-management',
   templateUrl: './content-management.component.html',
   styleUrls: ['./content-management.component.scss']
 })

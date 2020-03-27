@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'digipop-loader',
+  selector: 'digipop-admin-loader',
   templateUrl: './loader.component.html',
   styleUrls: ['./loader.component.scss']
 })

@@ -8,7 +8,7 @@ import {
 } from '@app/core';
 
 @Component({
-  selector: 'digipop-header',
+  selector: 'digipop-admin-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

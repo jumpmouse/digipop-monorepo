@@ -4,7 +4,7 @@ import { environment } from '@env/environment';
 import { ScriptContentService } from '@app/shared/services/script-content.service';
 
 @Component({
-  selector: 'app-about',
+  selector: 'digipop-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })

@@ -10,7 +10,7 @@ import { Project } from '@app/models/project.model';
 import { DefaultImg } from '@assets/default-img.const';
 
 @Component({
-  selector: 'app-project',
+  selector: 'digipop-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

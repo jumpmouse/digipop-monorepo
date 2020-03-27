@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'digipop-shell',
+  selector: 'digipop-admin-shell',
   templateUrl: './shell.component.html',
   styleUrls: ['./shell.component.scss']
 })

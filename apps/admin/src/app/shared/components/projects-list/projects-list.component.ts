@@ -9,7 +9,7 @@ import {
 import { Project } from '@app/models/project.model';
 
 @Component({
-  selector: 'digipop-projects-list',
+  selector: 'digipop-admin-projects-list',
   templateUrl: './projects-list.component.html',
   styleUrls: ['./projects-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

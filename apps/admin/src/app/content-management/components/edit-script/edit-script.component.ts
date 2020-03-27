@@ -4,7 +4,7 @@ import { ScriptContentService } from '@app/shared/services/script-content.servic
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'digipop-edit-script',
+  selector: 'digipop-admin-edit-script',
   templateUrl: './edit-script.component.html',
   styleUrls: ['./edit-script.component.scss']
 })

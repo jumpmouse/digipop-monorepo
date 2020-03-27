@@ -7,7 +7,7 @@ import { Predmet, Skripta } from '@app/models/skripta.model';
 import { UtilsService } from '@app/shared/services/utils.service';
 
 @Component({
-  selector: 'digipop-add-edit-course',
+  selector: 'digipop-admin-add-edit-course',
   templateUrl: './add-edit-course.component.html',
   styleUrls: ['./add-edit-course.component.scss']
 })

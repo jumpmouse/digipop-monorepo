@@ -14,7 +14,7 @@ import { ScriptContentService } from '@app/shared/services/script-content.servic
 import { combineLatest } from 'rxjs';
 
 @Component({
-  selector: 'digipop-section-management',
+  selector: 'digipop-admin-section-management',
   templateUrl: './section-management.component.html',
   styleUrls: ['./section-management.component.scss']
 })

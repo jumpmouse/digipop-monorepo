@@ -5,7 +5,7 @@ import { UtilsService } from '@app/shared/services/utils.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'digipop-content-editing',
+  selector: 'digipop-admin-content-editing',
   templateUrl: './content-editing.component.html',
   styleUrls: ['./content-editing.component.scss']
 })

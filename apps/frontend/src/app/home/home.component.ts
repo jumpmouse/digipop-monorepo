@@ -5,7 +5,7 @@ import { ProjectsService } from '@app/shared/services/projects.service';
 import { ScriptContentService } from '@app/shared/services/script-content.service';
 
 @Component({
-  selector: 'app-home',
+  selector: 'digipop-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
