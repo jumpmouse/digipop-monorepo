@@ -9,7 +9,7 @@ import { Logger, I18nService } from '@app/core';
 const log = new Logger('App');
 
 @Component({
-  selector: 'app-root',
+  selector: 'digipop-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

@@ -12,7 +12,7 @@ import { ScriptContentService } from '@app/shared/services/script-content.servic
 import { combineLatest } from 'rxjs';
 
 @Component({
-  selector: 'app-course-section',
+  selector: 'digipop-course-section',
   templateUrl: './course-section.component.html',
   styleUrls: ['./course-section.component.scss']
 })
