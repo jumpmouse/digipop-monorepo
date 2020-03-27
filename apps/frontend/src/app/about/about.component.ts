@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { environment } from '@env/environment';
-import { ScriptContentService } from '@app/shared/services/script-content.service';
+import { ScriptContentService } from '@digipop/shared';
 
 @Component({
   selector: 'digipop-about',

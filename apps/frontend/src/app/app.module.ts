@@ -5,7 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { environment } from '@env/environment';
 import { CoreModule } from '@digipop/core';
-import { SharedModule } from '@app/shared';
+import { SharedModule } from '@digipop/shared';
 import { HomeModule } from './home/home.module';
 import { ShellModule } from './shell/shell.module';
 import { CourseModule } from './course/course.module';
