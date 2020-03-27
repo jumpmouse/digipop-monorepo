@@ -14,15 +14,17 @@ import { ProjectComponent } from './components/project/project.component';
   imports: [CommonModule, CardsModule, RouterModule, NgbAccordionModule],
   declarations: [
     LoaderComponent,
+    ProjectComponent,
     ProjectsListComponent,
-    EditableProjectComponent
+    EditableProjectComponent,
+    EditableProjectsListComponent
   ],
   exports: [
     LoaderComponent,
+    ProjectComponent,
     ProjectsListComponent,
     EditableProjectComponent,
-    EditableProjectsListComponent,
-    ProjectComponent
+    EditableProjectsListComponent
   ]
 })
 export class SharedModule {}

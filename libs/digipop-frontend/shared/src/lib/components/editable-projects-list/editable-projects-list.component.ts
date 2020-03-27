@@ -9,7 +9,7 @@ import {
 import { Project } from '@digipop/models';
 
 @Component({
-  selector: 'digipop-shared-projects-list',
+  selector: 'digipop-shared-editable-projects-list',
   templateUrl: './editable-projects-list.component.html',
   styleUrls: ['./editable-projects-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -7,7 +7,7 @@ import {
   ChangeDetectionStrategy
 } from '@angular/core';
 import { Project } from '@digipop/models';
-import { DefaultImg } from '@assets/default-img.const';
+import { DefaultImg } from '../../assets/default-img.const';
 
 @Component({
   selector: 'digipop-shared-project',

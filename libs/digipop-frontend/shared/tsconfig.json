@@ -16,8 +16,7 @@
     "lib": ["es2018", "dom"],
     "baseUrl": "./",
     "paths": {
-      "@digipop/models": ["../../../libs/models/src/index.ts"],
-      "@assets/*": ["src/lib/assets/*"]
+      "@digipop/models": ["../../../libs/models/src/index.ts"]
     }
   },
   "include": ["**/*.ts"]
