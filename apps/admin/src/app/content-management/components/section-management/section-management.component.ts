@@ -9,8 +9,8 @@ import {
 } from '@app/models/skripta.model';
 import { ActivatedRoute } from '@angular/router';
 import { Project } from '@app/models/project.model';
-import { ProjectsService } from '@app/shared/services/projects.service';
-import { ScriptContentService } from '@app/shared/services/script-content.service';
+import { ProjectsService } from '@digipop/shared';
+import { ScriptContentService } from '@digipop/shared';
 import { combineLatest } from 'rxjs';
 
 @Component({

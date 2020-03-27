@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '@app/models/project.model';
 import { Predmet, ContentMetaData, Skripta } from '@app/models/skripta.model';
-import { ProjectsService } from '@app/shared/services/projects.service';
-import { ScriptContentService } from '@app/shared/services/script-content.service';
+import { ProjectsService } from '@digipop/shared';
+import { ScriptContentService } from '@digipop/shared';
 
 @Component({
   selector: 'digipop-admin-course-management',

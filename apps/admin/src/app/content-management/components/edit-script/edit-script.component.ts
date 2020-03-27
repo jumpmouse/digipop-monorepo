@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmptyScriptForEditing } from '@app/content-management/constants/course-management.const';
-import { ScriptContentService } from '@app/shared/services/script-content.service';
+import { ScriptContentService } from '@digipop/shared';
 import { Router } from '@angular/router';
 
 @Component({

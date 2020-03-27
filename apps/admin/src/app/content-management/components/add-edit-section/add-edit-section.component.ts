@@ -3,8 +3,8 @@ import { EmptySectionForEditing } from '@app/content-management/constants/course
 import { ActivatedRoute } from '@angular/router';
 import { Oblast, Skripta, Predmet } from '@app/models/skripta.model';
 import { combineLatest } from 'rxjs';
-import { ScriptContentService } from '@app/shared/services/script-content.service';
-import { UtilsService } from '@app/shared/services/utils.service';
+import { ScriptContentService } from '@digipop/shared';
+import { UtilsService } from '@digipop/shared';
 
 @Component({
   selector: 'digipop-admin-add-edit-section',

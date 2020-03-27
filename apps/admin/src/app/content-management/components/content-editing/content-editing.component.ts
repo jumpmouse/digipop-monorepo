@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as DecoupledEditor from '@ckeditor/ckeditor5-build-digipop';
 import { EditorConfig } from '@app/content-management/constants/editor-config.const';
-import { UtilsService } from '@app/shared/services/utils.service';
+import { UtilsService } from '@digipop/shared';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
