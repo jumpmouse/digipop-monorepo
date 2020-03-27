@@ -6,14 +6,26 @@
     <a class="mr-3 btn btn-light" [routerLink]="['edit']" role="button">
       <i class="fas fa-pencil-alt"></i>
     </a>
-    <h5 class="d-inline cursor-pointer hover" [routerLink]="['edit']">Izmeni opis predmeta</h5>
+    <h5 class="d-inline cursor-pointer hover" [routerLink]="['edit']">
+      Izmeni opis predmeta
+    </h5>
   </div>
   <div class="mb-2">
-    <a class="mr-3 btn btn-warning" [routerLink]="['new-section']" role="button">
+    <a
+      class="mr-3 btn btn-warning"
+      [routerLink]="['new-section']"
+      role="button"
+    >
       <i class="fas fa-plus"></i>
     </a>
-    <h5 class="d-inline cursor-pointer hover" [routerLink]="['new-section']">Dodaj novu oblast</h5>
+    <h5 class="d-inline cursor-pointer hover" [routerLink]="['new-section']">
+      Dodaj novu oblast
+    </h5>
   </div>
 </div>
 <h1 class="text-primary ml-3"><small>Oblasti:</small></h1>
-<digipop-projects-list [projects]="sections" [editingMode]="true" projectType="section"></digipop-projects-list>
+<digipop-projects-list
+  [projects]="sections"
+  [editingMode]="true"
+  projectType="section"
+></digipop-projects-list>

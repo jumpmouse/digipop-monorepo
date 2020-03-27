@@ -13,7 +13,10 @@ export class EditScriptComponent implements OnInit {
   public fields: string[] = [];
   public labels: { required: boolean; name: string }[] = [];
 
-  constructor(private scriptContentService: ScriptContentService, private router: Router) {}
+  constructor(
+    private scriptContentService: ScriptContentService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.scriptContentService.scriptContent.subscribe(script => {

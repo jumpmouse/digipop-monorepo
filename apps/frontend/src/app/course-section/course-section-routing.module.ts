@@ -6,7 +6,12 @@ import { CourseSectionComponent } from './course-section.component';
 
 const routes: Routes = [
   Shell.childRoutes([
-    { path: ':courseName/:sectionName', component: CourseSectionComponent, children: [], pathMatch: 'full' }
+    {
+      path: ':courseName/:sectionName',
+      component: CourseSectionComponent,
+      children: [],
+      pathMatch: 'full'
+    }
   ])
 ];
 

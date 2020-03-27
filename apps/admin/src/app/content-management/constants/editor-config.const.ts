@@ -35,7 +35,13 @@ export const EditorConfig = {
   },
   language: 'sr',
   image: {
-    toolbar: ['imageTextAlternative', '|', 'imageStyle:alignLeft', 'imageStyle:full', 'imageStyle:alignRight'],
+    toolbar: [
+      'imageTextAlternative',
+      '|',
+      'imageStyle:alignLeft',
+      'imageStyle:full',
+      'imageStyle:alignRight'
+    ],
     // toolbar: ['imageTextAlternative', 'imageStyle:full', 'imageStyle:side']
     styles: [
       // This option is equal to a situation where no style is applied.
@@ -49,6 +55,12 @@ export const EditorConfig = {
     ]
   },
   table: {
-    contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableCellProperties', 'tableProperties']
+    contentToolbar: [
+      'tableColumn',
+      'tableRow',
+      'mergeTableCells',
+      'tableCellProperties',
+      'tableProperties'
+    ]
   }
 };

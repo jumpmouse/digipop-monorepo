@@ -1,4 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  ChangeDetectionStrategy
+} from '@angular/core';
 import { Project } from '@app/models/project.model';
 import { DefaultImg } from '@assets/default-img.const';
 
@@ -34,6 +41,8 @@ export class EditableProjectComponent implements OnInit {
 
   private setupLink(): void {
     this.link =
-      this.projectType === 'course' ? '/' + this.project.link : '/' + this.project.link + '/edit';
+      this.projectType === 'course'
+        ? '/' + this.project.link
+        : '/' + this.project.link + '/edit';
   }
 }

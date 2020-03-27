@@ -6,14 +6,22 @@
     <a class="mr-3 btn btn-light" [routerLink]="['edit-script']" role="button">
       <i class="fas fa-pencil-alt"></i>
     </a>
-    <h5 class="d-inline cursor-pointer hover" [routerLink]="['edit-script']">Izmeni opis skripte</h5>
+    <h5 class="d-inline cursor-pointer hover" [routerLink]="['edit-script']">
+      Izmeni opis skripte
+    </h5>
   </div>
   <div class="mb-2">
     <a class="mr-3 btn btn-warning" [routerLink]="['new-course']" role="button">
       <i class="fas fa-plus"></i>
     </a>
-    <h5 class="d-inline cursor-pointer hover" [routerLink]="['new-course']">Dodaj novi predmet</h5>
+    <h5 class="d-inline cursor-pointer hover" [routerLink]="['new-course']">
+      Dodaj novi predmet
+    </h5>
   </div>
 </div>
 <h1 class="text-info ml-3"><small>Predmeti:</small></h1>
-<digipop-projects-list [projects]="predmeti" [editingMode]="true" projectType="course"></digipop-projects-list>
+<digipop-projects-list
+  [projects]="predmeti"
+  [editingMode]="true"
+  projectType="course"
+></digipop-projects-list>

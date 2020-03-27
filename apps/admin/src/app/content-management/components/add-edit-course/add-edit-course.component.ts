@@ -28,8 +28,10 @@ export class AddEditCourseComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log('hello add edit course');
-    combineLatest([this.route.params, this.scriptContentService.scriptContent]).subscribe(([param, script]) => {
+    combineLatest([
+      this.route.params,
+      this.scriptContentService.scriptContent
+    ]).subscribe(([param, script]) => {
       this.script = script;
       if (param && param.courseName) {
         const courseMetaData = param.courseName.split('_');
@@ -56,7 +58,8 @@ export class AddEditCourseComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const fileName = this.getId() + '_' + this.utils.sanitizeFileName(this.content.naziv);
+    const fileName =
+      this.getId() + '_' + this.utils.sanitizeFileName(this.content.naziv);
     const courseForUpdate: Predmet = Object.assign({}, this.content, {
       link: (this.currentCourse && this.currentCourse.link) || fileName,
       id: (this.currentCourse && this.currentCourse.id) || this.getId(),

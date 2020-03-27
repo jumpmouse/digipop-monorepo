@@ -10,7 +10,11 @@ import { EditableProjectComponent } from './components/editable-project/editable
 
 @NgModule({
   imports: [CommonModule, CardsModule, RouterModule, NgbAccordionModule],
-  declarations: [LoaderComponent, ProjectsListComponent, EditableProjectComponent],
+  declarations: [
+    LoaderComponent,
+    ProjectsListComponent,
+    EditableProjectComponent
+  ],
   exports: [LoaderComponent, ProjectsListComponent, EditableProjectComponent]
 })
 export class SharedModule {}

@@ -15,7 +15,10 @@ export class ContentManagementComponent implements OnInit {
   predmeti: Project[];
   script: ContentMetaData;
 
-  constructor(private projectsService: ProjectsService, private scriptContentService: ScriptContentService) {}
+  constructor(
+    private projectsService: ProjectsService,
+    private scriptContentService: ScriptContentService
+  ) {}
 
   ngOnInit() {
     this.isLoading = true;
@@ -32,7 +35,9 @@ export class ContentManagementComponent implements OnInit {
   }
 
   prepareProjects(script: Skripta): Project[] {
-    const predmeti: Project[] = Object.entries(script.predmeti).map(([id, predmet]: [string, Predmet], index: number) =>
+    const predmeti: Project[] = Object.entries(
+      script.predmeti
+    ).map(([id, predmet]: [string, Predmet], index: number) =>
       this.projectsService.prepareProjectFromPredmet(predmet, index)
     );
 
