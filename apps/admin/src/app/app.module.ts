@@ -26,7 +26,7 @@ import { APP_BASE_HREF } from '@angular/common';
     AppRoutingModule // must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],
-  providers: [{provide: APP_BASE_HREF, useValue: environment.baseHref}],
+  providers: [{ provide: APP_BASE_HREF, useValue: environment.baseHref }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
