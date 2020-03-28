@@ -36,6 +36,10 @@ app.post(
   }
 );
 
+app.route(['/content-management', '/content-management/*']).get((req: any, res: { sendFile: (arg0: string) => void }) => {
+  res.sendFile(__dirname + '/content-management/index.html');
+});
+
 app.route('*').get((req: any, res: { sendFile: (arg0: string) => void }) => {
   res.sendFile(__dirname + '/index.html');
 });

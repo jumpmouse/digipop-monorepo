@@ -132,7 +132,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/admin",
+            "outputPath": "dist/content-management",
             "index": "apps/admin/src/index.html",
             "main": "apps/admin/src/main.ts",
             "tsConfig": "apps/admin/tsconfig.app.json",
