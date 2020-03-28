@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "build:production": "rimraf ./api && tsc && yes | cp -rfa ./api/ ../../dist",
+    "build:production": "rimraf ./api && tsc && jsmin --overwrite api/server.js && yes | cp -rfa ./api/*.* ../../dist",
     "build:watch": "tsc --watch",
     "serve": "tsc && npm run build:watch & nodemon"
   },
@@ -17,6 +17,7 @@
     "@types/express": "^4.17.3",
     "@types/jest": "^25.1.4",
     "@types/node": "^12.7.2",
+    "jsmin": "^1.0.1",
     "nodemon": "^1.19.1",
     "rimraf": "^3.0.0",
     "ts-node": "^8.3.0",

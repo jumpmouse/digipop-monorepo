@@ -2,7 +2,7 @@
   "watch": ["api"],
   "ext": ".js",
   "ignore": [],
-  "exec": "node ./api/main.js",
+  "exec": "node ./api/server.js",
   "env": {
     "APP_PORT": 3000
   }
