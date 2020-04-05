@@ -3,6 +3,7 @@ import { Project } from '@digipop/models';
 import { Predmet, ContentMetaData, Skripta } from '@digipop/models';
 import { ProjectsService } from '@digipop/shared';
 import { ScriptContentService } from '@digipop/shared';
+import { skipWhile } from 'rxjs/operators';
 
 @Component({
   selector: 'digipop-home',
@@ -22,7 +23,7 @@ export class ContentManagementComponent implements OnInit {
 
   ngOnInit() {
     this.isLoading = true;
-    this.scriptContentService.scriptContent.subscribe(script => {
+    this.scriptContentService.scriptContent.pipe(skipWhile(script => !script)).subscribe(script => {
       this.predmeti = this.prepareProjects(script);
       this.isLoading = false;
       this.script = {
