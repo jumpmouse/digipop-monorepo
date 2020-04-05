@@ -1,21 +1,31 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
 /* eslint-disable @typescript-eslint/no-var-requires, @typescript-eslint/no-explicit-any */
 const express = require('express');
 const bodyParser = require('body-parser');
-/* eslint-enable @typescript-eslint/no-var-requires */
+const path = require('path');
+const compression = require('compression');
+const helmet = require('helmet'); /* eslint-enable @typescript-eslint/no-var-requires */
 const app = express();
-const PORT = process.env.PORT || process.env.APP_PORT || 80;
+const PORT = process.env.APP_PORT || 3000;
+const parentPath = path.join(__dirname, '/..');
+const assetsPath = path.join(__dirname, '/../assets');
+
+app.use(compression());
+app.use(helmet());
+
+// serve static files
+app.use('/content-management/assets/*.*', (req: any, res: any) => {
+  const fileName = `${req.params[0]}.${req.params[1]}`;
+  res.sendFile(fileName, { root: assetsPath });
+});
 
 app.get(
   '*.*',
-  express.static(__dirname, {
+  express.static(parentPath, {
     maxAge: '1m'
   })
 );
 
+// api
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -36,16 +46,17 @@ app.post(
   }
 );
 
+// routes
 app
   .route(['/content-management', '/content-management/*'])
   .get((req: any, res: { sendFile: (arg0: string) => void }) => {
-    res.sendFile(__dirname + '/content-management/index.html');
+    res.sendFile(parentPath + '/content-management/index.html');
   });
 
 app.route('*').get((req: any, res: { sendFile: (arg0: string) => void }) => {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(parentPath + '/index.html');
 });
 
 app.listen(PORT, () => {
-  console.log(`Node Express server listening on  port ${PORT}`);
+  console.log(`Digipop server listening on port ${PORT}`);
 });

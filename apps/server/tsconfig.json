@@ -3,9 +3,9 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "lib": ["es6"],
+    "lib": ["es5"],
     "allowJs": true,
-    "outDir": "api",
+    "outDir": "compiled",
     "rootDir": "src",
     "strict": true,
     "noImplicitAny": true,
