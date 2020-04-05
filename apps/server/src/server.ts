@@ -2,12 +2,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const fs = require('fs');
 const compression = require('compression');
 const helmet = require('helmet'); /* eslint-enable @typescript-eslint/no-var-requires */
 const app = express();
 const PORT = process.env.APP_PORT || 3000;
 const parentPath = path.join(__dirname, '/..');
 const assetsPath = path.join(__dirname, '/../assets');
+const scriptContentPath = path.join(__dirname, '/../script-content');
 
 app.use(compression());
 app.use(helmet());
@@ -28,6 +30,16 @@ app.get(
 // api
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.get(
+  '/api/script-content',
+  (req: any, res: { send: (arg0: { data: object }) => void }) => {
+    // const rawData = fs.readFileSync(path.join(scriptContentPath, '/script-content.json'));
+    const rawData = fs.readFileSync('script-content.json');
+    const scriptContent = JSON.parse(rawData);
+    res.send({ data: scriptContent });
+  }
+);
 
 app.get(
   '/api/*',

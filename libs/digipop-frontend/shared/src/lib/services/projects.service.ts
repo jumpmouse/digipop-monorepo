@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Predmet, Oblast, ProgramskaCelina } from '@digipop/models';
+import { Predmet, Oblast } from '@digipop/models';
 import { Project, SimpleLinkObject } from '@digipop/models';
-import { UtilsService } from './utils.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +8,21 @@ import { UtilsService } from './utils.service';
 export class ProjectsService {
   sections: SimpleLinkObject[] = [];
 
-  constructor(private utilsService: UtilsService) {}
+  constructor() {}
+
+  prepareProjectsFromPredmeti(predmeti: { [key: string]: Predmet }): Project[] {
+    const rawPredmeti: Predmet[] = Object.values(predmeti).sort(
+      (a, b) => a.redosled - b.redosled
+    );
+    return rawPredmeti.map((predmet: Predmet, index: number) =>
+      this.prepareProjectFromPredmet(predmet, index)
+    );
+  }
 
   prepareProjectFromPredmet(predmet: Predmet, index: number): Project {
     const sections: SimpleLinkObject[] = Object.entries(predmet.oblasti).map(
       ([id, oblast]: [string, Oblast]) => {
-        const key = oblast.id.split('-').join('.') + '.';
+        const key = oblast.redosled + '.';
         return {
           key,
           name: oblast.naziv,
@@ -34,6 +42,18 @@ export class ProjectsService {
     };
   }
 
+  prepareProjectsFromOblasti(
+    oblasti: { [key: string]: Oblast },
+    parrentLink: string
+  ): Project[] {
+    const rawOblasti: Oblast[] = Object.values(oblasti).sort(
+      (a, b) => a.redosled - b.redosled
+    );
+    return rawOblasti.map((oblast: Oblast) =>
+      this.prepareProjectFromOblast(oblast, parrentLink)
+    );
+  }
+
   prepareProjectFromOblast(oblast: Oblast, parrentLink: string): Project {
     const oblastKey = oblast.id.split('-').join('.') + '.';
     const oblastLink = parrentLink + '/' + oblast.link;
@@ -43,7 +63,7 @@ export class ProjectsService {
     for (let i = 0; i < programskeCeline.length; i++) {
       const programskaCelina = programskeCeline[i][1];
 
-      const key = programskaCelina.id.split('-').join('.') + '.';
+      const key = programskaCelina.redna_oznaka + '.';
       const simpleLinkObject: SimpleLinkObject = {
         key,
         name: programskaCelina.naziv,
@@ -51,12 +71,6 @@ export class ProjectsService {
         link: oblastLink
       };
       this.sections.push(simpleLinkObject);
-      if (programskaCelina.podceline) {
-        const podceline = Object.values(programskaCelina.podceline);
-        if (podceline && podceline.length) {
-          this.addSubsectionsRecursively(podceline, oblastLink);
-        }
-      }
     }
 
     return {
@@ -68,28 +82,5 @@ export class ProjectsService {
       photoUrl: oblast.URL_slike,
       sections: this.sections
     };
-  }
-
-  private addSubsectionsRecursively(
-    podceline: ProgramskaCelina[],
-    parrentLink: string
-  ): void {
-    for (let i = 0; i < podceline.length; i++) {
-      const podcelina = podceline[i];
-      const key = podcelina.id.split('-').join('.') + '.';
-      const simpleLink = {
-        key,
-        name: podcelina.naziv,
-        // link: parrentLink + '#' + podcelina.link
-        link: parrentLink
-      };
-      this.sections.push(simpleLink);
-      if (podcelina.podceline) {
-        const subPodceline = Object.values(podcelina.podceline);
-        if (subPodceline && subPodceline.length) {
-          this.addSubsectionsRecursively(subPodceline, parrentLink);
-        }
-      }
-    }
   }
 }

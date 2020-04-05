@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Skripta, Predmet, OblastForEditing, Oblast } from '@digipop/models';
-import { SadrzajSkripte } from '../assets/script-content.constant';
+import { Skripta, Predmet, Oblast } from '@digipop/models';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { UtilsService } from './utils.service';
 
@@ -8,11 +7,10 @@ import { UtilsService } from './utils.service';
   providedIn: 'root'
 })
 export class ScriptContentService {
-  private currentScriptContent: Skripta = JSON.parse(
-    JSON.stringify(SadrzajSkripte)
-  );
+  public scriptLoaded = false;
+  private currentScriptContent: Skripta;
   private currentScriptContent$: BehaviorSubject<Skripta> = new BehaviorSubject(
-    this.currentScriptContent
+    null
   );
 
   constructor(private utilsService: UtilsService) {}
@@ -37,12 +35,18 @@ export class ScriptContentService {
   }
 
   public setScriptContent(scriptObject: Skripta) {
-    this.currentScriptContent = Object.assign(
-      this.currentScriptContent,
-      scriptObject
-    );
+    if (this.scriptLoaded) {
+      this.currentScriptContent = Object.assign(
+        this.currentScriptContent,
+        scriptObject
+      );
+      this.updateScriptFile();
+      this.currentScriptContent$.next(this.currentScriptContent);
+      return;
+    }
+    this.currentScriptContent = scriptObject;
     this.currentScriptContent$.next(this.currentScriptContent);
-    this.updateScriptFile();
+    this.scriptLoaded = true;
   }
 
   private updateScriptFile(): void {

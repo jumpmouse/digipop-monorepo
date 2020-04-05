@@ -7,13 +7,20 @@ import {
 } from '@angular/common/http';
 import { RouteReuseStrategy, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { SharedModule } from '@digipop/shared';
 
 import { RouteReusableStrategy } from './route-reusable-strategy';
 import { HttpService } from './http/http.service';
 import { QueryService } from './query.service';
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule, TranslateModule, RouterModule],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    TranslateModule,
+    RouterModule,
+    SharedModule
+  ],
   providers: [
     {
       provide: HttpClient,
