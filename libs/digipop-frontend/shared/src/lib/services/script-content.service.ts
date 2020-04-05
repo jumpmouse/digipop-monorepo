@@ -9,7 +9,9 @@ import { UtilsService } from './utils.service';
 export class ScriptContentService {
   public scriptLoaded = false;
   private currentScriptContent: Skripta;
-  private currentScriptContent$: BehaviorSubject<Skripta> = new BehaviorSubject(null);
+  private currentScriptContent$: BehaviorSubject<Skripta> = new BehaviorSubject(
+    null
+  );
 
   constructor(private utilsService: UtilsService) {}
 
@@ -34,7 +36,10 @@ export class ScriptContentService {
 
   public setScriptContent(scriptObject: Skripta) {
     if (this.scriptLoaded) {
-      this.currentScriptContent = Object.assign(this.currentScriptContent, scriptObject);
+      this.currentScriptContent = Object.assign(
+        this.currentScriptContent,
+        scriptObject
+      );
       this.updateScriptFile();
       this.currentScriptContent$.next(this.currentScriptContent);
       return;

@@ -10,9 +10,11 @@ export class ProjectsService {
 
   constructor() {}
 
-  prepareProjectsFromPredmeti(predmeti: { [key: string]: Predmet; }): Project[] {
-    const rawPredmeti: Predmet[] = Object.values(predmeti).sort((a, b) => a.redosled - b.redosled);
-    return rawPredmeti.map((predmet:Predmet, index: number) =>
+  prepareProjectsFromPredmeti(predmeti: { [key: string]: Predmet }): Project[] {
+    const rawPredmeti: Predmet[] = Object.values(predmeti).sort(
+      (a, b) => a.redosled - b.redosled
+    );
+    return rawPredmeti.map((predmet: Predmet, index: number) =>
       this.prepareProjectFromPredmet(predmet, index)
     );
   }
@@ -40,8 +42,13 @@ export class ProjectsService {
     };
   }
 
-  prepareProjectsFromOblasti(oblasti: { [key: string]: Oblast; }, parrentLink: string): Project[] {
-    const rawOblasti: Oblast[] = Object.values(oblasti).sort((a, b) => a.redosled - b.redosled);
+  prepareProjectsFromOblasti(
+    oblasti: { [key: string]: Oblast },
+    parrentLink: string
+  ): Project[] {
+    const rawOblasti: Oblast[] = Object.values(oblasti).sort(
+      (a, b) => a.redosled - b.redosled
+    );
     return rawOblasti.map((oblast: Oblast) =>
       this.prepareProjectFromOblast(oblast, parrentLink)
     );

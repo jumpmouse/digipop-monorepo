@@ -6,18 +6,17 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class QueryService {
-  
   private headers = new HttpHeaders({ 'Content-Type': 'application/JSON' });
 
   constructor(private http: HttpClient) {}
 
-  getJSONData(
-    resource: 'script' | 'content' = 'script',
-  ): Observable<object> {
+  getJSONData(resource: 'script' | 'content' = 'script'): Observable<object> {
     return this.http.request('get', `/${resource}`, { headers: this.headers });
   }
 
   getScriptContent(): Observable<object> {
-    return this.http.request('get', `/script-content`, { headers: this.headers });
+    return this.http.request('get', `/script-content`, {
+      headers: this.headers
+    });
   }
 }

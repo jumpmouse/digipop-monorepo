@@ -14,7 +14,13 @@ import { HttpService } from './http/http.service';
 import { QueryService } from './query.service';
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule, TranslateModule, RouterModule, SharedModule],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    TranslateModule,
+    RouterModule,
+    SharedModule
+  ],
   providers: [
     {
       provide: HttpClient,

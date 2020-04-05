@@ -23,16 +23,18 @@ export class ContentManagementComponent implements OnInit {
 
   ngOnInit() {
     this.isLoading = true;
-    this.scriptContentService.scriptContent.pipe(skipWhile(script => !script)).subscribe(script => {
-      this.predmeti = this.prepareProjects(script);
-      this.isLoading = false;
-      this.script = {
-        title: script.naslov,
-        subtitle: script.podnaslov,
-        shortDescription: script.opis_ukratko,
-        description: script.opis
-      };
-    });
+    this.scriptContentService.scriptContent
+      .pipe(skipWhile(script => !script))
+      .subscribe(script => {
+        this.predmeti = this.prepareProjects(script);
+        this.isLoading = false;
+        this.script = {
+          title: script.naslov,
+          subtitle: script.podnaslov,
+          shortDescription: script.opis_ukratko,
+          description: script.opis
+        };
+      });
   }
 
   prepareProjects(script: Skripta): Project[] {

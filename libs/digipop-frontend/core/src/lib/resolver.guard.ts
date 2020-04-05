@@ -8,17 +8,22 @@ import { map } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class ResolverGuard implements Resolve<Skripta | boolean> {
-  constructor(private scriptContentService: ScriptContentService, private queryService: QueryService) {}
+  constructor(
+    private scriptContentService: ScriptContentService,
+    private queryService: QueryService
+  ) {}
 
   resolve(): Observable<Skripta> | boolean {
     console.log();
     if (this.scriptContentService.scriptLoaded) {
       return true;
     }
-    return this.queryService.getScriptContent().pipe(map((script: {data: Skripta}) => {
-      this.scriptContentService.setScriptContent(script.data);
-      console.log(script.data);
-      return script.data;
-    }));
+    return this.queryService.getScriptContent().pipe(
+      map((script: { data: Skripta }) => {
+        this.scriptContentService.setScriptContent(script.data);
+        console.log(script.data);
+        return script.data;
+      })
+    );
   }
 }

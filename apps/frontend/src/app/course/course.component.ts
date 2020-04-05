@@ -42,7 +42,10 @@ export class CourseComponent implements OnInit {
   }
 
   prepareProjects(courseId: string, script: Skripta): Project[] {
-    return this.projectsService.prepareProjectsFromOblasti(script.predmeti[courseId].oblasti, this.courseLink);
+    return this.projectsService.prepareProjectsFromOblasti(
+      script.predmeti[courseId].oblasti,
+      this.courseLink
+    );
   }
 
   prepareCourse(predmet: Predmet): ContentMetaData {
