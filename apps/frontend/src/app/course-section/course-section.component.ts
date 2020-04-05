@@ -64,27 +64,7 @@ export class CourseSectionComponent implements OnInit {
         programskaCelina.tekst +
         '</p>';
       content += `<h5>Zadaci</h5><h5>Diskusija</h5>`;
-      if (programskaCelina.podceline) {
-        const podceline = Object.values(programskaCelina.podceline);
-        content += this.addContentRecursively(podceline);
-      }
     }
     return content;
-  }
-
-  private addContentRecursively(section: ProgramskaCelina[]): string {
-    let subcontent = '';
-    const podceline = Object.entries(section);
-    for (let index = 0; index < podceline.length; index++) {
-      const podcelina = podceline[index][1];
-      subcontent +=
-        '<h4>' + podcelina.naziv + '</h4><p>' + podcelina.tekst + '</p>';
-      subcontent += `<h5>Zadaci</h5><h5>Diskusija</h5>`;
-      if (podcelina.podceline) {
-        const subPodceline = Object.values(podcelina.podceline);
-        subcontent += this.addContentRecursively(subPodceline);
-      }
-    }
-    return subcontent;
   }
 }
