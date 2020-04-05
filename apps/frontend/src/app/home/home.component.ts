@@ -35,12 +35,6 @@ export class ContentManagementComponent implements OnInit {
   }
 
   prepareProjects(script: Skripta): Project[] {
-    const predmeti: Project[] = Object.entries(
-      script.predmeti
-    ).map(([id, predmet]: [string, Predmet], index: number) =>
-      this.projectsService.prepareProjectFromPredmet(predmet, index)
-    );
-
-    return predmeti;
+    return this.projectsService.prepareProjectsFromPredmeti(script.predmeti);
   }
 }
