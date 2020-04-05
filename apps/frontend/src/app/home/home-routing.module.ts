@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { extract } from '@digipop/core';
+import { extract, ResolverGuard } from '@digipop/core';
 import { ContentManagementComponent } from './home.component';
 import { Shell } from '@app/shell/shell.service';
 
@@ -11,7 +11,10 @@ const routes: Routes = [
       path: '',
       component: ContentManagementComponent,
       data: { title: extract('Home') },
-      pathMatch: 'full'
+      pathMatch: 'full',
+      resolve: {
+        script: ResolverGuard
+      }
     }
   ])
 ];
