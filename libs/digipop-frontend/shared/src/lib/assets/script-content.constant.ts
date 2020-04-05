@@ -19,6 +19,7 @@ export const SadrzajSkripte: Skripta = {
         'Dugacki opis predmeta. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?',
       link: 'pez_populaciona-ekologija-zivotinja',
       URL_slike: '',
+      redosled: 1,
       oblasti: {
         'pez-I': {
           id: 'pez-I',
@@ -26,6 +27,7 @@ export const SadrzajSkripte: Skripta = {
           opis: 'opis oblasti',
           link: 'pez-I_demografija',
           URL_slike: '',
+          redosled: 1,
           programske_celine: {
             'pez-I-1': {
               id: 'pez-I-1',
@@ -33,7 +35,7 @@ export const SadrzajSkripte: Skripta = {
               link: 'pez-I-1_uvod',
               URL_slike: '',
               tekst: 'uvodni tekst ovde',
-              redosled: '1'
+              redna_oznaka: '1'
             },
             'pez-I-2': {
               id: 'pez-I-2',
@@ -41,7 +43,7 @@ export const SadrzajSkripte: Skripta = {
               link: 'pez-I-2_demografske-tablice',
               URL_slike: '',
               tekst: 'tekst demografskih tablica',
-              redosled: '2'
+              redna_oznaka: '2'
             },
             'pez-I-3': {
               id: 'pez-I-3',
@@ -49,7 +51,7 @@ export const SadrzajSkripte: Skripta = {
               link: 'pez-I-3_mortalitet',
               URL_slike: '',
               tekst: 'tekst o mortalitetu',
-              redosled: '3'
+              redna_oznaka: '3'
             },
             'pez-I-4': {
               id: 'pez-I-4',
@@ -57,7 +59,7 @@ export const SadrzajSkripte: Skripta = {
               link: 'pez-I-4_tipovi-prezivljavanja',
               URL_slike: '',
               tekst: 'tekst o tipovima prezivljavanja',
-              redosled: '3.1'
+              redna_oznaka: '3.1'
             },
             'pez-I-5': {
               id: 'pez-I-5',
@@ -65,7 +67,7 @@ export const SadrzajSkripte: Skripta = {
               link: 'pez-I-5_natalitet',
               URL_slike: '',
               tekst: 'natalitet tekst',
-              redosled: '4'
+              redna_oznaka: '4'
             },
             'pez-I-6': {
               id: 'pez-I-6',
@@ -73,7 +75,7 @@ export const SadrzajSkripte: Skripta = {
               link: 'pez-I-6_uzrasna-struktura',
               URL_slike: '',
               tekst: 'tekst o uzrasnoj strukturi',
-              redosled: '5'
+              redna_oznaka: '5'
             },
             'pez-I-7': {
               id: 'pez-I-7',
@@ -81,7 +83,7 @@ export const SadrzajSkripte: Skripta = {
               link: 'pez-I-7_dostizanje-stabilne-uzrasne-strukture',
               URL_slike: '',
               tekst: 'tekst o tome kako se dostize stabilna uzrasna struktura',
-              redosled: '5.1'
+              redna_oznaka: '5.1'
             }
           }
         }
@@ -96,6 +98,7 @@ export const SadrzajSkripte: Skripta = {
         'Dugacki opis predmeta. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?',
       link: 'oez_opsta-ekologija-zivotinja',
       URL_slike: '',
+      redosled: 2,
       oblasti: {}
     }
   }

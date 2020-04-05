@@ -19,6 +19,7 @@ export interface Predmet {
   opis: string;
   kratki_opis: string;
   URL_slike?: string;
+  redosled: number;
   oblasti: { [key: string]: Oblast };
 }
 
@@ -28,6 +29,7 @@ export interface Oblast {
   opis: string;
   link: string;
   URL_slike?: string;
+  redosled: number;
   programske_celine?: { [key: string]: ProgramskaCelina };
 }
 
@@ -37,7 +39,7 @@ export interface ProgramskaCelina {
   link: string;
   tekst?: string;
   URL_slike?: string;
-  redosled: string;
+  redna_oznaka: string;
 }
 
 export interface PredmetForEditing {
@@ -46,6 +48,7 @@ export interface PredmetForEditing {
   opis: string;
   kratki_opis: string;
   URL_slike?: string;
+  redosled: number;
 }
 
 export interface OblastForEditing {
@@ -53,13 +56,14 @@ export interface OblastForEditing {
   opis: string;
   URL_slike?: string;
   programske_celine?: { [key: string]: ProgramskaCelinaForEditing };
+  redosled: number;
 }
 
 export interface ProgramskaCelinaForEditing {
   naziv: string;
   tekst?: string;
   URL_slike?: string;
-  redosled?: string;
+  redna_oznaka: string;
 }
 
 export interface SkriptaForEditing {
