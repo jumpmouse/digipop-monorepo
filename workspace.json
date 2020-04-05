@@ -71,7 +71,8 @@
           "options": {
             "hmr": true,
             "hmrWarning": false,
-            "browserTarget": "frontend:build"
+            "browserTarget": "frontend:build",
+            "proxyConfig": "apps/frontend/proxy.conf.json"
           },
           "configurations": {
             "production": {
