@@ -37,7 +37,7 @@ export interface ProgramskaCelina {
   link: string;
   tekst?: string;
   URL_slike?: string;
-  podceline?: { [key: string]: ProgramskaCelina };
+  redosled: string;
 }
 
 export interface PredmetForEditing {
@@ -59,7 +59,7 @@ export interface ProgramskaCelinaForEditing {
   naziv: string;
   tekst?: string;
   URL_slike?: string;
-  podceline?: { [key: string]: ProgramskaCelinaForEditing };
+  redosled?: string;
 }
 
 export interface SkriptaForEditing {
