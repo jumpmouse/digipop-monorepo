@@ -1,7 +1,24 @@
 {
   "extends": "../../../tsconfig.json",
   "compilerOptions": {
-    "types": ["node", "jest"]
+    "types": ["node", "jest"],
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowJs": true,
+    "target": "es2015",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
+    "baseUrl": "./",
+    "paths": {
+      "@digipop/models": ["../../../libs/models/src/index.ts"],
+      "@digipop/shared": ["../../../libs/digipop-frontend/shared/src/index.ts"]
+    }
   },
   "include": ["**/*.ts"]
 }
