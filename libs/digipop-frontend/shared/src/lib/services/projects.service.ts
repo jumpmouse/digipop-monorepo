@@ -6,20 +6,24 @@ import { Project, SimpleLinkObject } from '@digipop/models';
   providedIn: 'root'
 })
 export class ProjectsService {
+  predmeti: Project[];
+  oblasti: {[key: string]: Project[]} = {};
   sections: SimpleLinkObject[] = [];
 
   constructor() {}
 
-  prepareProjectsFromPredmeti(predmeti: { [key: string]: Predmet }): Project[] {
+  prepareProjectsFromPredmeti(predmeti: { [key: string]: Predmet }): void {
     const rawPredmeti: Predmet[] = Object.values(predmeti).sort(
       (a, b) => a.redosled - b.redosled
     );
-    return rawPredmeti.map((predmet: Predmet, index: number) =>
-      this.prepareProjectFromPredmet(predmet, index)
-    );
+    this.predmeti = rawPredmeti.map((predmet: Predmet, index: number) => {
+      const currentProject = this.prepareProjectFromPredmet(predmet, index);
+      this.oblasti[predmet.id] = this.prepareProjectsFromOblasti(predmet.oblasti, currentProject.link);
+      return currentProject;
+    });
   }
 
-  prepareProjectFromPredmet(predmet: Predmet, index: number): Project {
+  private prepareProjectFromPredmet(predmet: Predmet, index: number): Project {
     const sections: SimpleLinkObject[] = Object.values(predmet.oblasti)
     .sort(
       (a, b) => a.redosled - b.redosled
@@ -46,7 +50,7 @@ export class ProjectsService {
     };
   }
 
-  prepareProjectsFromOblasti(
+  private prepareProjectsFromOblasti(
     oblasti: { [key: string]: Oblast },
     parrentLink: string
   ): Project[] {
@@ -58,7 +62,7 @@ export class ProjectsService {
     );
   }
 
-  prepareProjectFromOblast(oblast: Oblast, parrentLink: string): Project {
+  private prepareProjectFromOblast(oblast: Oblast, parrentLink: string): Project {
     const oblastKey = oblast.id.split('-').join('.') + '.';
     const oblastLink = parrentLink + '/' + oblast.link;
     this.sections = [];

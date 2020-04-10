@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SectionRoutingModule } from './section-routing.module';
 import { SectionComponent } from './section.component';
 import { SharedModule } from '@digipop/shared';
+import { SectionContentComponent } from './section-content/section-content.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import { SharedModule } from '@digipop/shared';
     TranslateModule,
     SectionRoutingModule
   ],
-  declarations: [SectionComponent]
+  declarations: [SectionComponent, SectionContentComponent]
 })
 export class SectionModule {}

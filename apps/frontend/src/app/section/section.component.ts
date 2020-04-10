@@ -5,10 +5,11 @@ import {
   ContentMetaData,
   Skripta,
   Oblast,
-  ProgramskaCelina
+  Project,
+  SimpleLinkObject
 } from '@digipop/models';
-import { ActivatedRoute } from '@angular/router';
-import { ScriptContentService } from '@digipop/shared';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ScriptContentService, ProjectsService } from '@digipop/shared';
 import { combineLatest } from 'rxjs';
 
 @Component({
@@ -27,44 +28,52 @@ export class SectionComponent implements OnInit {
   private sectionLink: string;
   private sectionId: string;
   private sectionName: string;
+  private fragment: string;
+  private subsections: SimpleLinkObject[];
 
   constructor(
     private route: ActivatedRoute,
-    private scriptContentService: ScriptContentService
+    private router: Router,
+    private scriptContentService: ScriptContentService,
+    private projectsService: ProjectsService
   ) {}
 
   ngOnInit() {
     combineLatest([
       this.route.params,
+      this.route.fragment,
       this.scriptContentService.scriptContent
-    ]).subscribe(([param, script]) => {
+    ]).subscribe(([param, fragment, script]) => {
       const courseMetaData = param.courseName.split('_');
       const sectionMetaData = param.sectionName.split('_');
-      this.courseLink = param.courseName;
-      this.courseId = courseMetaData[0];
-      this.courseName = courseMetaData[1];
-      this.sectionLink = param.sectionName;
-      this.sectionId = sectionMetaData[0];
-      this.sectionName = sectionMetaData[1];
+      // route changed
+      if (this.sectionId !== sectionMetaData[0]) {
+        this.courseLink = param.courseName;
+        this.courseId = courseMetaData[0];
+        this.courseName = courseMetaData[1];
+        this.sectionLink = param.sectionName;
+        this.sectionId = sectionMetaData[0];
+        this.sectionName = sectionMetaData[1];
+        this.section = script.predmeti[this.courseId].oblasti[this.sectionId];
+        this.subsections = this.prepareSubsections(this.courseId, this.sectionId);
+      }
 
-      this.content = this.prepareContent(script);
+      if (!fragment) {
+        this.router.navigate([], {fragment: this.subsections[0].fragment});
+        return;
+      }
+      this.fragment = fragment;
     });
   }
 
-  prepareContent(script: Skripta): string {
-    let content = '';
-    this.section = script.predmeti[this.courseId].oblasti[this.sectionId];
-    const programskeCeline = Object.entries(this.section.programske_celine);
-    for (let index = 0; index < programskeCeline.length; index++) {
-      const programskaCelina = programskeCeline[index][1];
-      content +=
-        '<h3>' +
-        programskaCelina.naziv +
-        '</h3><p>' +
-        programskaCelina.tekst +
-        '</p>';
-      content += `<h5>Zadaci</h5><h5>Diskusija</h5>`;
+  private prepareSubsections(courseId: string, sectionId: string) {
+    let sections;
+    for (const oblast of this.projectsService.oblasti[courseId]) {
+      if (oblast.id === sectionId) {
+        sections = oblast.sections;
+      }
+      break;
     }
-    return content;
+    return sections;
   }
 }
