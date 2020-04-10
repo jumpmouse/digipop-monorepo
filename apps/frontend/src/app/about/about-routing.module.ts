@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { extract } from '@digipop/core';
+import { extract, ResolverGuard } from '@digipop/core';
 import { Shell } from '@app/shell/shell.service';
 import { AboutComponent } from './about.component';
 
@@ -10,7 +10,10 @@ const routes: Routes = [
     {
       path: 'o-skripti',
       component: AboutComponent,
-      data: { title: extract('o-skripti') }
+      data: { title: extract('o-skripti') },
+      resolve: {
+        script: ResolverGuard
+      }
     }
   ])
 ];

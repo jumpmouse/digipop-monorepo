@@ -30,6 +30,7 @@ export interface Oblast {
   link: string;
   URL_slike?: string;
   redosled: number;
+  redosled_programskih_celina?: string[];
   programske_celine?: { [key: string]: ProgramskaCelina };
 }
 
@@ -56,6 +57,7 @@ export interface OblastForEditing {
   opis: string;
   URL_slike?: string;
   programske_celine?: { [key: string]: ProgramskaCelinaForEditing };
+  redosled_programskih_celina?: string[];
   redosled: number;
 }
 

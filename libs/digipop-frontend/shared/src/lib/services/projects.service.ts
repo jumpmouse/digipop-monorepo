@@ -20,8 +20,12 @@ export class ProjectsService {
   }
 
   prepareProjectFromPredmet(predmet: Predmet, index: number): Project {
-    const sections: SimpleLinkObject[] = Object.entries(predmet.oblasti).map(
-      ([id, oblast]: [string, Oblast]) => {
+    const sections: SimpleLinkObject[] = Object.values(predmet.oblasti)
+    .sort(
+      (a, b) => a.redosled - b.redosled
+    )
+    .map(
+      (oblast: Oblast) => {
         const key = oblast.redosled + '.';
         return {
           key,
@@ -59,15 +63,15 @@ export class ProjectsService {
     const oblastLink = parrentLink + '/' + oblast.link;
     this.sections = [];
 
-    const programskeCeline = Object.entries(oblast.programske_celine);
-    for (let i = 0; i < programskeCeline.length; i++) {
-      const programskaCelina = programskeCeline[i][1];
+    const redosled = oblast.redosled_programskih_celina;
+    for (let i = 0; i < redosled.length; i++) {
+      const programskaCelina = oblast.programske_celine[redosled[i]];
 
       const key = programskaCelina.redna_oznaka + '.';
       const simpleLinkObject: SimpleLinkObject = {
         key,
         name: programskaCelina.naziv,
-        // link: oblastLink + '#' + programskaCelina.link
+        fragment: programskaCelina.link,
         link: oblastLink
       };
       this.sections.push(simpleLinkObject);
