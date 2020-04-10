@@ -6,11 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./section-content.component.scss']
 })
 export class SectionContentComponent implements OnInit {
-  @Input() contentObject: object;
+  @Input() subsectionContent: object;
 
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.contentObject);
-  }
+  ngOnInit() {}
 }

@@ -6,7 +6,8 @@ import {
   Skripta,
   Oblast,
   Project,
-  SimpleLinkObject
+  SimpleLinkObject,
+  ProgramskaCelina
 } from '@digipop/models';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ScriptContentService, ProjectsService } from '@digipop/shared';
@@ -22,13 +23,15 @@ export class SectionComponent implements OnInit {
   course: ContentMetaData;
   content: string;
   section: Oblast;
+  subsectionContent: ProgramskaCelina;
   private courseLink: string;
   private courseId: string;
   private courseName: string;
   private sectionLink: string;
   private sectionId: string;
   private sectionName: string;
-  private fragment: string;
+  private fragmentId: string;
+  private fragmentName: string;
   private subsections: SimpleLinkObject[];
 
   constructor(
@@ -62,7 +65,11 @@ export class SectionComponent implements OnInit {
         this.router.navigate([], {fragment: this.subsections[0].fragment});
         return;
       }
-      this.fragment = fragment;
+
+      const fragmentMetaData = fragment.split('_');
+      this.fragmentId = fragmentMetaData[0];
+      this.fragmentName = fragmentMetaData[1];
+      this.subsectionContent = this.section.programske_celine[this.fragmentId];
     });
   }
 
