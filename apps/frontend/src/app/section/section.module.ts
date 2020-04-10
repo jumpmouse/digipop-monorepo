@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { CourseSectionRoutingModule } from './course-section-routing.module';
-import { CourseSectionComponent } from './course-section.component';
+import { SectionRoutingModule } from './section-routing.module';
+import { SectionComponent } from './section.component';
 import { SharedModule } from '@digipop/shared';
 
 @NgModule({
@@ -11,8 +11,8 @@ import { SharedModule } from '@digipop/shared';
     CommonModule,
     SharedModule,
     TranslateModule,
-    CourseSectionRoutingModule
+    SectionRoutingModule
   ],
-  declarations: [CourseSectionComponent]
+  declarations: [SectionComponent]
 })
-export class CourseSectionModule {}
+export class SectionModule {}

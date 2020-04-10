@@ -12,7 +12,7 @@ import { CourseModule } from './course/course.module';
 import { AboutModule } from './about/about.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CourseSectionModule } from './course-section/course-section.module';
+import { SectionModule } from './section/section.module';
 
 @NgModule({
   imports: [
@@ -27,7 +27,7 @@ import { CourseSectionModule } from './course-section/course-section.module';
     HomeModule,
     AboutModule,
     CourseModule,
-    CourseSectionModule,
+    SectionModule,
     AppRoutingModule // must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],

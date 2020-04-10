@@ -12,11 +12,11 @@ import { ScriptContentService } from '@digipop/shared';
 import { combineLatest } from 'rxjs';
 
 @Component({
-  selector: 'digipop-course-section',
-  templateUrl: './course-section.component.html',
-  styleUrls: ['./course-section.component.scss']
+  selector: 'digipop-section',
+  templateUrl: './section.component.html',
+  styleUrls: ['./section.component.scss']
 })
-export class CourseSectionComponent implements OnInit {
+export class SectionComponent implements OnInit {
   version: string | null = environment.version;
   course: ContentMetaData;
   content: string;
