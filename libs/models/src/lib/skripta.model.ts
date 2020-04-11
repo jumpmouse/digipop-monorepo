@@ -49,7 +49,7 @@ export interface PredmetForEditing {
   opis: string;
   kratki_opis: string;
   URL_slike?: string;
-  redosled: number;
+  redosled?: number;
 }
 
 export interface OblastForEditing {
@@ -58,14 +58,14 @@ export interface OblastForEditing {
   URL_slike?: string;
   programske_celine?: { [key: string]: ProgramskaCelinaForEditing };
   redosled_programskih_celina?: string[];
-  redosled: number;
+  redosled?: number;
 }
 
 export interface ProgramskaCelinaForEditing {
   naziv: string;
   tekst?: string;
   URL_slike?: string;
-  redna_oznaka: string;
+  redna_oznaka?: string;
 }
 
 export interface SkriptaForEditing {
