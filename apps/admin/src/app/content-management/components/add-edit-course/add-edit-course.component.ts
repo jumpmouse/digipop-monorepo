@@ -63,7 +63,8 @@ export class AddEditCourseComponent implements OnInit {
     const courseForUpdate: Predmet = Object.assign({}, this.content, {
       link: (this.currentCourse && this.currentCourse.link) || fileName,
       id: (this.currentCourse && this.currentCourse.id) || this.getId(),
-      oblasti: (this.currentCourse && this.currentCourse.oblasti) || {}
+      oblasti: (this.currentCourse && this.currentCourse.oblasti) || {},
+      redosled: (this.currentCourse && this.currentCourse.redosled) || 1
     });
 
     this.scriptContentService.addUpdateCourse(courseForUpdate);

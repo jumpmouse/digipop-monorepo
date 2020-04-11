@@ -37,15 +37,12 @@ export class CourseComponent implements OnInit {
       this.courseId = courseMetaData[0];
       this.courseName = courseMetaData[1];
       this.course = this.prepareCourse(script.predmeti[this.courseId]);
-      this.sections = this.prepareProjects(this.courseId, script);
+      this.sections = this.prepareProjects(this.courseId);
     });
   }
 
-  prepareProjects(courseId: string, script: Skripta): Project[] {
-    return this.projectsService.prepareProjectsFromOblasti(
-      script.predmeti[courseId].oblasti,
-      this.courseLink
-    );
+  prepareProjects(courseId: string): Project[] {
+    return this.projectsService.oblasti[courseId];
   }
 
   prepareCourse(predmet: Predmet): ContentMetaData {

@@ -2,15 +2,19 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { Shell } from '@app/shell/shell.service';
-import { CourseSectionComponent } from './course-section.component';
+import { SectionComponent } from './section.component';
+import { ResolverGuard } from '@digipop/core';
 
 const routes: Routes = [
   Shell.childRoutes([
     {
       path: ':courseName/:sectionName',
-      component: CourseSectionComponent,
+      component: SectionComponent,
       children: [],
-      pathMatch: 'full'
+      pathMatch: 'full',
+      resolve: {
+        script: ResolverGuard
+      }
     }
   ])
 ];
@@ -20,4 +24,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class CourseSectionRoutingModule {}
+export class SectionRoutingModule {}

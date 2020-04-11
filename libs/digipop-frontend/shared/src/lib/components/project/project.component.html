@@ -47,6 +47,7 @@
             <ng-container *ngFor="let section of project.sections">
               <a
                 [routerLink]="['/' + section.link]"
+                [fragment]="section.fragment"
                 class="section-link h5 d-block"
               >
                 <small>{{ section.key }} {{ section.name }}</small>

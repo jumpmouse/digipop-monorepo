@@ -26,7 +26,7 @@ export class ContentManagementComponent implements OnInit {
     this.scriptContentService.scriptContent
       .pipe(skipWhile(script => !script))
       .subscribe(script => {
-        this.predmeti = this.prepareProjects(script);
+        this.predmeti = this.prepareProjects();
         this.isLoading = false;
         this.script = {
           title: script.naslov,
@@ -37,7 +37,7 @@ export class ContentManagementComponent implements OnInit {
       });
   }
 
-  prepareProjects(script: Skripta): Project[] {
-    return this.projectsService.prepareProjectsFromPredmeti(script.predmeti);
+  prepareProjects(): Project[] {
+    return this.projectsService.predmeti;
   }
 }

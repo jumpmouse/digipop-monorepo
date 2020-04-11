@@ -10,12 +10,16 @@ import { SectionManagementComponent } from './components/section-management/sect
 import { AddEditCourseComponent } from './components/add-edit-course/add-edit-course.component';
 import { AddEditSectionComponent } from './components/add-edit-section/add-edit-section.component';
 import { EditScriptComponent } from './components/edit-script/edit-script.component';
+import { ResolverGuard } from '@digipop/core';
 
 const routes: Routes = [
   Shell.childRoutes([
     {
       path: '',
       component: ContentManagementComponent,
+      resolve: {
+        script: ResolverGuard
+      },
       children: [
         {
           path: '',

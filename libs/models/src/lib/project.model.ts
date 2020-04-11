@@ -12,4 +12,5 @@ export interface SimpleLinkObject {
   key: string;
   name: string;
   link: string;
+  fragment?: string;
 }

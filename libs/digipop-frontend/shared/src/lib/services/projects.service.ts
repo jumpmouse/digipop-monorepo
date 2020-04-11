@@ -6,30 +6,37 @@ import { Project, SimpleLinkObject } from '@digipop/models';
   providedIn: 'root'
 })
 export class ProjectsService {
+  predmeti: Project[];
+  oblasti: { [key: string]: Project[] } = {};
   sections: SimpleLinkObject[] = [];
 
   constructor() {}
 
-  prepareProjectsFromPredmeti(predmeti: { [key: string]: Predmet }): Project[] {
+  prepareProjectsFromPredmeti(predmeti: { [key: string]: Predmet }): void {
     const rawPredmeti: Predmet[] = Object.values(predmeti).sort(
       (a, b) => a.redosled - b.redosled
     );
-    return rawPredmeti.map((predmet: Predmet, index: number) =>
-      this.prepareProjectFromPredmet(predmet, index)
-    );
+    this.predmeti = rawPredmeti.map((predmet: Predmet, index: number) => {
+      const currentProject = this.prepareProjectFromPredmet(predmet, index);
+      this.oblasti[predmet.id] = this.prepareProjectsFromOblasti(
+        predmet.oblasti,
+        currentProject.link
+      );
+      return currentProject;
+    });
   }
 
-  prepareProjectFromPredmet(predmet: Predmet, index: number): Project {
-    const sections: SimpleLinkObject[] = Object.entries(predmet.oblasti).map(
-      ([id, oblast]: [string, Oblast]) => {
+  private prepareProjectFromPredmet(predmet: Predmet, index: number): Project {
+    const sections: SimpleLinkObject[] = Object.values(predmet.oblasti)
+      .sort((a, b) => a.redosled - b.redosled)
+      .map((oblast: Oblast) => {
         const key = oblast.redosled + '.';
         return {
           key,
           name: oblast.naziv,
           link: `${predmet.link}/${oblast.link}`
         };
-      }
-    );
+      });
 
     return {
       id: predmet.id,
@@ -42,7 +49,7 @@ export class ProjectsService {
     };
   }
 
-  prepareProjectsFromOblasti(
+  private prepareProjectsFromOblasti(
     oblasti: { [key: string]: Oblast },
     parrentLink: string
   ): Project[] {
@@ -54,20 +61,23 @@ export class ProjectsService {
     );
   }
 
-  prepareProjectFromOblast(oblast: Oblast, parrentLink: string): Project {
+  private prepareProjectFromOblast(
+    oblast: Oblast,
+    parrentLink: string
+  ): Project {
     const oblastKey = oblast.id.split('-').join('.') + '.';
     const oblastLink = parrentLink + '/' + oblast.link;
     this.sections = [];
 
-    const programskeCeline = Object.entries(oblast.programske_celine);
-    for (let i = 0; i < programskeCeline.length; i++) {
-      const programskaCelina = programskeCeline[i][1];
+    const redosled = oblast.redosled_programskih_celina;
+    for (let i = 0; i < redosled.length; i++) {
+      const programskaCelina = oblast.programske_celine[redosled[i]];
 
       const key = programskaCelina.redna_oznaka + '.';
       const simpleLinkObject: SimpleLinkObject = {
         key,
         name: programskaCelina.naziv,
-        // link: oblastLink + '#' + programskaCelina.link
+        fragment: programskaCelina.link,
         link: oblastLink
       };
       this.sections.push(simpleLinkObject);

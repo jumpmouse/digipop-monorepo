@@ -23,7 +23,7 @@ export class CourseManagementComponent implements OnInit {
   ngOnInit() {
     this.isLoading = true;
     this.scriptContentService.scriptContent.subscribe(script => {
-      this.predmeti = this.prepareProjects(script);
+      this.predmeti = this.prepareProjects();
       this.isLoading = false;
       this.script = {
         title: script.naslov,
@@ -34,12 +34,7 @@ export class CourseManagementComponent implements OnInit {
     });
   }
 
-  prepareProjects(script: Skripta): Project[] {
-    const predmeti: Project[] = Object.entries(
-      script.predmeti
-    ).map(([id, predmet]: [string, Predmet], index: number) =>
-      this.projectsService.prepareProjectFromPredmet(predmet, index)
-    );
-    return predmeti;
+  prepareProjects(): Project[] {
+    return this.projectsService.predmeti;
   }
 }

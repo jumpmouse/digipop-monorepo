@@ -20,6 +20,15 @@
           "link": "pez-I_demografija",
           "URL_slike": "",
           "redosled": 1,
+          "redosled_programskih_celina": [
+            "pez-I-1",
+            "pez-I-2",
+            "pez-I-3",
+            "pez-I-4",
+            "pez-I-5",
+            "pez-I-6",
+            "pez-I-7"
+          ],
           "programske_celine": {
             "pez-I-1": {
               "id": "pez-I-1",

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { Shell } from '@app/shell/shell.service';
 import { CourseComponent } from './course.component';
+import { ResolverGuard } from '@digipop/core';
 
 const routes: Routes = [
   Shell.childRoutes([
@@ -10,7 +11,10 @@ const routes: Routes = [
       path: ':courseName',
       component: CourseComponent,
       children: [],
-      pathMatch: 'full'
+      pathMatch: 'full',
+      resolve: {
+        script: ResolverGuard
+      }
     }
   ])
 ];
