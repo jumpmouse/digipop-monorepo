@@ -24,6 +24,8 @@ export class SectionComponent implements OnInit {
   content: string;
   section: Oblast;
   subsectionContent: ProgramskaCelina;
+  subsections: SimpleLinkObject[];
+  fragment: string;
   private courseLink: string;
   private courseId: string;
   private courseName: string;
@@ -32,7 +34,6 @@ export class SectionComponent implements OnInit {
   private sectionName: string;
   private fragmentId: string;
   private fragmentName: string;
-  private subsections: SimpleLinkObject[];
 
   constructor(
     private route: ActivatedRoute,
@@ -70,6 +71,7 @@ export class SectionComponent implements OnInit {
       }
 
       const fragmentMetaData = fragment.split('_');
+      this.fragment = fragment;
       this.fragmentId = fragmentMetaData[0];
       this.fragmentName = fragmentMetaData[1];
       this.subsectionContent = this.section.programske_celine[this.fragmentId];

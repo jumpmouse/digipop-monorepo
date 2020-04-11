@@ -1,4 +1,22 @@
-<h1>{{ section.naziv }}</h1>
-<digipop-section-content
-  [subsectionContent]="subsectionContent"
-></digipop-section-content>
+<div class="row">
+  <div class="d-none d-lg-block col-lg-3 p-4 align-self-start sticky-top">
+    <div class="panel" title="Sadržaj" id="content-summary">
+      <ng-container *ngFor="let subsection of subsections">
+        <a
+          [routerLink]="['/' + subsection.link]"
+          [class.sidebar-link-active]="subsection.fragment === fragment"
+          [fragment]="subsection.fragment"
+          class="section-link h5 d-block"
+        >
+          <small>{{ subsection.key }} {{ subsection.name }}</small>
+        </a>
+      </ng-container>
+    </div>
+  </div>
+  <div class="col-xs-12 col-lg-9">
+    <h1>{{ section.naziv }}</h1>
+    <digipop-section-content
+      [subsectionContent]="subsectionContent"
+    ></digipop-section-content>
+  </div>
+</div>
