@@ -9,7 +9,6 @@ const app = express();
 const PORT = process.env.APP_PORT || 3000;
 const parentPath = path.join(__dirname, '/..');
 const assetsPath = path.join(__dirname, '/../assets');
-const scriptContentPath = path.join(__dirname, '/../script-content');
 
 app.use(compression());
 app.use(helmet());
@@ -34,7 +33,6 @@ app.use(bodyParser.json());
 app.get(
   '/api/script-content',
   (req: any, res: { send: (arg0: { data: object }) => void }) => {
-    // const rawData = fs.readFileSync(path.join(scriptContentPath, '/script-content.json'));
     const rawData = fs.readFileSync('script-content.json');
     const scriptContent = JSON.parse(rawData);
     res.send({ data: scriptContent });
