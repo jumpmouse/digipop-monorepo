@@ -58,11 +58,14 @@ export class SectionComponent implements OnInit {
         this.sectionId = sectionMetaData[0];
         this.sectionName = sectionMetaData[1];
         this.section = script.predmeti[this.courseId].oblasti[this.sectionId];
-        this.subsections = this.prepareSubsections(this.courseId, this.sectionId);
+        this.subsections = this.prepareSubsections(
+          this.courseId,
+          this.sectionId
+        );
       }
 
       if (!fragment) {
-        this.router.navigate([], {fragment: this.subsections[0].fragment});
+        this.router.navigate([], { fragment: this.subsections[0].fragment });
         return;
       }
 

@@ -27,8 +27,10 @@ export class SectionManagementComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    combineLatest([this.route.params, this.scriptContentService.scriptContent])
-    .subscribe(([param, script]) => {
+    combineLatest([
+      this.route.params,
+      this.scriptContentService.scriptContent
+    ]).subscribe(([param, script]) => {
       const courseMetaData = param.courseName.split('_');
       this.courseLink = param.courseName;
       this.courseId = courseMetaData[0];

@@ -75,7 +75,7 @@ export class AddEditSectionComponent implements OnInit {
       id: (this.currentSection && this.currentSection.id) || this.getId(),
       programske_celine:
         (this.currentSection && this.currentSection.programske_celine) || {},
-        redosled: (this.currentCourse && this.currentCourse.redosled) || 1
+      redosled: (this.currentCourse && this.currentCourse.redosled) || 1
     });
 
     this.scriptContentService.addUpdateSection(sectionForUpdate);

@@ -8,12 +8,7 @@ import { SharedModule } from '@digipop/shared';
 import { SectionContentComponent } from './section-content/section-content.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    TranslateModule,
-    SectionRoutingModule
-  ],
+  imports: [CommonModule, SharedModule, TranslateModule, SectionRoutingModule],
   declarations: [SectionComponent, SectionContentComponent]
 })
 export class SectionModule {}
