@@ -26,6 +26,5 @@ export const EmptySectionForEditing: OblastForEditing = {
 
 export const EmtySubSectionForEditing: ProgramskaCelinaForEditing = {
   naziv: 'true',
-  tekst: '',
-  podceline: {}
+  tekst: ''
 };
