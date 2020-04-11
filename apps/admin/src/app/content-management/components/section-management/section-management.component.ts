@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 import { environment } from '@env/environment';
-import { Predmet, Oblast, ContentMetaData, Skripta } from '@digipop/models';
+import { Predmet } from '@digipop/models';
 import { ActivatedRoute } from '@angular/router';
 import { Project } from '@digipop/models';
-import { ProjectsService } from '@digipop/shared';
-import { ScriptContentService } from '@digipop/shared';
+import { ProjectsService, ScriptContentService } from '@digipop/shared';
 import { combineLatest } from 'rxjs';
 
 @Component({
@@ -15,9 +14,9 @@ import { combineLatest } from 'rxjs';
 })
 export class SectionManagementComponent implements OnInit {
   version: string | null = environment.version;
-  course: ContentMetaData;
+  course: Predmet;
   sections: Project[];
-  private courseName: string;
+  courseName: string;
   private courseId: string;
   private courseLink: string;
 
@@ -28,34 +27,14 @@ export class SectionManagementComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    combineLatest([
-      this.route.params,
-      this.scriptContentService.scriptContent
-    ]).subscribe(([param, script]) => {
+    combineLatest([this.route.params, this.scriptContentService.scriptContent])
+    .subscribe(([param, script]) => {
       const courseMetaData = param.courseName.split('_');
       this.courseLink = param.courseName;
       this.courseId = courseMetaData[0];
-      this.courseName = courseMetaData[1];
-      this.sections = this.prepareProjects(this.courseId, script);
+      this.course = script.predmeti[this.courseId];
+      this.courseName = this.course.naziv;
+      this.sections = this.projectsService.oblasti[this.courseId];
     });
-  }
-
-  prepareProjects(courseId: string, script: Skripta): Project[] {
-    this.course = this.prepareCourse(script.predmeti[courseId]);
-    const oblasti: Project[] = Object.entries(
-      script.predmeti[courseId].oblasti
-    ).map(([id, oblast]: [string, Oblast]) =>
-      this.projectsService.prepareProjectFromOblast(oblast, this.courseLink)
-    );
-    return oblasti;
-  }
-
-  prepareCourse(predmet: Predmet): ContentMetaData {
-    return {
-      title: predmet.naziv,
-      subtitle: '',
-      shortDescription: '',
-      description: predmet.opis
-    };
   }
 }
