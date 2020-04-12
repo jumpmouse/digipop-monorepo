@@ -30,11 +30,9 @@ export class AppComponent implements OnInit, OnDestroy {
       environment.supportedLanguages
     );
 
-    const onNavigationEnd = this.router.events.pipe(
+    this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
-    );
-
-    onNavigationEnd.subscribe(() => {
+    ).subscribe(() => {
       window.scrollTo(0, 0);
     });
   }
