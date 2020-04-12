@@ -1,0 +1,128 @@
+{
+  "pez-I-1_uvod": {
+    "id": "pez-I-1_uvod",
+    "naziv": "Uvod",
+    "tekst": "uvodni tekst ovde",
+    "zadaci": [
+      {
+        "opis": "ovo je opis",
+        "tehnicki_opis": "ovo je tehnicki opis",
+        "zadatak": "ovo je zadatak"
+      }
+    ],
+    "reference": [
+      {
+        "link": "digipop.bg.ac.rs/referenca",
+        "opis": "ovo je tekst linka/reference"
+      }
+    ]
+  },
+  "pez-I-2_demografske-tablice": {
+    "id": "pez-I-2_demografske-tablice",
+    "naziv": "Demografske tablice",
+    "tekst": "tekst demografskih tablica",
+    "zadaci": [
+      {
+        "opis": "ovo je opis",
+        "tehnicki_opis": "ovo je tehnicki opis",
+        "zadatak": "ovo je zadatak"
+      }
+    ],
+    "reference": [
+      {
+        "link": "digipop.bg.ac.rs/referenca",
+        "opis": "ovo je tekst linka/reference"
+      }
+    ]
+  },
+  "pez-I-3_mortalitet": {
+    "id": "pez-I-3_mortalitet",
+    "naziv": "Mortalitet",
+    "tekst": "tekst o mortalitetu",
+    "zadaci": [
+      {
+        "opis": "ovo je opis",
+        "tehnicki_opis": "ovo je tehnicki opis",
+        "zadatak": "ovo je zadatak"
+      }
+    ],
+    "reference": [
+      {
+        "link": "digipop.bg.ac.rs/referenca",
+        "opis": "ovo je tekst linka/reference"
+      }
+    ]
+  },
+  "pez-I-4_tipovi-prezivljavanja": {
+    "id": "pez-I-4_tipovi-prezivljavanja",
+    "naziv": "Tipovi preživljavanja",
+    "tekst": "tekst o tipovima prezivljavanja",
+    "zadaci": [
+      {
+        "opis": "ovo je opis",
+        "tehnicki_opis": "ovo je tehnicki opis",
+        "zadatak": "ovo je zadatak"
+      }
+    ],
+    "reference": [
+      {
+        "link": "digipop.bg.ac.rs/referenca",
+        "opis": "ovo je tekst linka/reference"
+      }
+    ]
+  },
+  "pez-I-5_natalitet": {
+    "id": "pez-I-5_natalitet",
+    "naziv": "Natalitet",
+    "tekst": "natalitet tekst",
+    "zadaci": [
+      {
+        "opis": "ovo je opis",
+        "tehnicki_opis": "ovo je tehnicki opis",
+        "zadatak": "ovo je zadatak"
+      }
+    ],
+    "reference": [
+      {
+        "link": "digipop.bg.ac.rs/referenca",
+        "opis": "ovo je tekst linka/reference"
+      }
+    ]
+  },
+  "pez-I-6_uzrasna-struktura": {
+    "id": "pez-I-6_uzrasna-struktura",
+    "naziv": "Uzrasna struktura",
+    "tekst": "tekst o uzrasnoj strukturi",
+    "zadaci": [
+      {
+        "opis": "ovo je opis",
+        "tehnicki_opis": "ovo je tehnicki opis",
+        "zadatak": "ovo je zadatak"
+      }
+    ],
+    "reference": [
+      {
+        "link": "digipop.bg.ac.rs/referenca",
+        "opis": "ovo je tekst linka/reference"
+      }
+    ]
+  },
+  "pez-I-7_dostizanje-stabilne-uzrasne-strukture": {
+    "id": "pez-I-7_dostizanje-stabilne-uzrasne-strukture",
+    "naziv": "Dostizanje stabilne uzrasne strukture",
+    "tekst": "tekst o tome kako se dostize stabilna uzrasna struktura",
+    "zadaci": [
+      {
+        "opis": "ovo je opis",
+        "tehnicki_opis": "ovo je tehnicki opis",
+        "zadatak": "ovo je zadatak"
+      }
+    ],
+    "reference": [
+      {
+        "link": "digipop.bg.ac.rs/referenca",
+        "opis": "ovo je tekst linka/reference"
+      }
+    ]
+  }
+}

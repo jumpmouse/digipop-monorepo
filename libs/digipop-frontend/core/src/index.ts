@@ -13,3 +13,4 @@ export * from './lib/logger.service';
 export * from './lib/until-destroyed';
 export * from './lib/query.service';
 export * from './lib/resolver.guard';
+export * from './lib/section.guard';

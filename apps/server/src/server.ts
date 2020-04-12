@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 /* eslint-disable @typescript-eslint/no-var-requires, @typescript-eslint/no-explicit-any */
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -9,6 +10,7 @@ const app = express();
 const PORT = process.env.APP_PORT || 3000;
 const parentPath = path.join(__dirname, '/..');
 const assetsPath = path.join(__dirname, '/../assets');
+// const sectionContentPath = path.join(__dirname, '/../data');
 
 app.use(compression());
 app.use(helmet());
@@ -33,9 +35,34 @@ app.use(bodyParser.json());
 app.get(
   '/api/script-content',
   (req: any, res: { send: (arg0: { data: object }) => void }) => {
-    const rawData = fs.readFileSync('script-content.json');
-    const scriptContent = JSON.parse(rawData);
-    res.send({ data: scriptContent });
+    try {
+      const rawData = fs.readFileSync('script-content.json');
+      const scriptContent = JSON.parse(rawData);
+      res.send({ data: scriptContent });
+    } catch (err) {
+      if (err.code === 'ENOENT') {
+        throw new Error('Data not found!');
+      } else {
+        throw err;
+      }
+    }
+  }
+);
+
+app.get(
+  '/api/script-content/:sectionName',
+  (req: any, res: { send: (arg0: { data: object }) => void }) => {
+    try {
+      const rawData = fs.readFileSync(`${req.params.sectionName}.json`);
+      const sectionContent = JSON.parse(rawData);
+      res.send({ data: sectionContent });
+    } catch (err) {
+      if (err.code === 'ENOENT') {
+        throw new Error('Data not found!');
+      } else {
+        throw err;
+      }
+    }
   }
 );
 

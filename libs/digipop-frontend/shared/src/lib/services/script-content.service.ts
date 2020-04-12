@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Skripta, Predmet, Oblast } from '@digipop/models';
+import {
+  Skripta,
+  Predmet,
+  Oblast,
+  ScriptData,
+  OblastSadrzaj
+} from '@digipop/models';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { UtilsService } from './utils.service';
 
@@ -8,6 +14,7 @@ import { UtilsService } from './utils.service';
 })
 export class ScriptContentService {
   public scriptLoaded = false;
+  private _scriptData: ScriptData = {};
   private currentScriptContent: Skripta;
   private currentScriptContent$: BehaviorSubject<Skripta> = new BehaviorSubject(
     null
@@ -17,6 +24,10 @@ export class ScriptContentService {
 
   get scriptContent(): Observable<Skripta> {
     return this.currentScriptContent$.asObservable();
+  }
+
+  get scriptData(): ScriptData {
+    return this._scriptData;
   }
 
   public addUpdateCourse(course: Predmet) {
@@ -47,6 +58,19 @@ export class ScriptContentService {
     this.currentScriptContent = scriptObject;
     this.currentScriptContent$.next(this.currentScriptContent);
     this.scriptLoaded = true;
+  }
+
+  public setSectionContent(
+    courseId: string,
+    sectionId: string,
+    sadrzaj: OblastSadrzaj
+  ): void {
+    if (!this._scriptData[courseId]) {
+      this._scriptData[courseId] = {};
+    }
+    if (!this._scriptData[courseId][sectionId]) {
+      this._scriptData[courseId][sectionId] = sadrzaj;
+    }
   }
 
   private updateScriptFile(): void {

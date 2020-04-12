@@ -1,9 +1,3 @@
-export interface ContentMetaData {
-  title: string;
-  subtitle: string;
-  shortDescription: string;
-  description: string;
-}
 export interface Skripta {
   naslov: string;
   podnaslov: string;
@@ -38,9 +32,46 @@ export interface ProgramskaCelina {
   id: string;
   naziv: string;
   link: string;
-  tekst?: string;
   URL_slike?: string;
   redna_oznaka: string;
+}
+
+export interface ScriptData {
+  // courseId
+  [key: string]: {
+    // sectionId
+    [key: string]: OblastSadrzaj;
+  };
+}
+
+export interface OblastSadrzaj {
+  [key: string]: ProgramskaCelinaSadrzaj;
+}
+
+export interface ProgramskaCelinaSadrzaj {
+  id: string;
+  naziv: string;
+  tekst: string;
+  zadaci?: Zadatak[];
+  reference?: Referenca[];
+}
+
+export interface Zadatak {
+  opis?: string;
+  tehnicki_opis?: string;
+  zadatak: string;
+}
+
+export interface Referenca {
+  opis: string;
+  link: string;
+}
+
+export interface SkriptaForEditing {
+  naslov: string;
+  podnaslov: string;
+  opis_ukratko: string;
+  opis: string;
 }
 
 export interface PredmetForEditing {
@@ -68,9 +99,9 @@ export interface ProgramskaCelinaForEditing {
   redna_oznaka?: string;
 }
 
-export interface SkriptaForEditing {
-  naslov: string;
-  podnaslov: string;
-  opis_ukratko: string;
-  opis: string;
+export interface ContentMetaData {
+  title: string;
+  subtitle: string;
+  shortDescription: string;
+  description: string;
 }
