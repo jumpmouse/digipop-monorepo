@@ -38,11 +38,11 @@ export interface ProgramskaCelina {
 
 export interface ScriptData {
   // courseId
-  [key: string] : {
+  [key: string]: {
     // sectionId
     [key: string]: OblastSadrzaj;
   };
-};
+}
 
 export interface OblastSadrzaj {
   [key: string]: ProgramskaCelinaSadrzaj;
