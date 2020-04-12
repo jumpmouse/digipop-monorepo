@@ -72,7 +72,9 @@ export class SectionComponent implements OnInit {
       this.fragment = fragment;
       this.fragmentId = fragmentMetaData[0];
       this.fragmentName = fragmentMetaData[1];
-      this.subsectionContent = this.scriptContentService.scriptData[this.courseId][this.sectionId][this.fragment];
+      this.subsectionContent = this.scriptContentService.scriptData[
+        this.courseId
+      ][this.sectionId][this.fragment];
     });
   }
 

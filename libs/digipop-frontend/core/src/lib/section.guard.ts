@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import {
+  Resolve,
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot
+} from '@angular/router';
 import { Skripta, OblastSadrzaj } from '@digipop/models';
 import { ScriptContentService, ProjectsService } from '@digipop/shared';
 import { QueryService } from './query.service';
@@ -14,7 +18,10 @@ export class SectionGuard implements Resolve<OblastSadrzaj> {
     private projectsService: ProjectsService
   ) {}
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<OblastSadrzaj> {
+  resolve(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ): Observable<OblastSadrzaj> {
     const courseMetaData = route.params.courseName.split('_');
     const sectionMetaData = route.params.sectionName.split('_');
     const courseId = courseMetaData[0];
@@ -46,11 +53,11 @@ export class SectionGuard implements Resolve<OblastSadrzaj> {
         return script.data;
       })
     );
-    
-    const observables: [
-      Observable<Skripta>,
-      Observable<OblastSadrzaj>
-    ] = [scriptObs, sectionContentObs];
+
+    const observables: [Observable<Skripta>, Observable<OblastSadrzaj>] = [
+      scriptObs,
+      sectionContentObs
+    ];
 
     return combineLatest(observables).pipe(
       map(data => {

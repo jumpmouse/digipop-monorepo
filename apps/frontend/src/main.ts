@@ -18,10 +18,12 @@ if (environment.production) {
 const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
 
 if (environment.hmr) {
-  if (module[ 'hot' ]) {
-    bootstrap().then((ngModuleRef) => {
-      return hmrModule(ngModuleRef, module);
-    }).catch(err => console.log(err));
+  if (module['hot']) {
+    bootstrap()
+      .then(ngModuleRef => {
+        return hmrModule(ngModuleRef, module);
+      })
+      .catch(err => console.log(err));
   } else {
     console.error('HMR is not enabled for webpack-dev-server!');
     console.log('Are you using the --hmr flag for ng serve?');
