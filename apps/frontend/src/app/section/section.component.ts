@@ -3,11 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from '@env/environment';
 import {
   ContentMetaData,
-  Skripta,
   Oblast,
-  Project,
   SimpleLinkObject,
-  ProgramskaCelina
+  ProgramskaCelinaSadrzaj
 } from '@digipop/models';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ScriptContentService, ProjectsService } from '@digipop/shared';
@@ -23,7 +21,7 @@ export class SectionComponent implements OnInit {
   course: ContentMetaData;
   content: string;
   section: Oblast;
-  subsectionContent: ProgramskaCelina;
+  subsectionContent: ProgramskaCelinaSadrzaj;
   subsections: SimpleLinkObject[];
   fragment: string;
   private courseLink: string;
@@ -74,7 +72,7 @@ export class SectionComponent implements OnInit {
       this.fragment = fragment;
       this.fragmentId = fragmentMetaData[0];
       this.fragmentName = fragmentMetaData[1];
-      this.subsectionContent = this.section.programske_celine[this.fragmentId];
+      this.subsectionContent = this.scriptContentService.scriptData[this.courseId][this.sectionId][this.fragment];
     });
   }
 

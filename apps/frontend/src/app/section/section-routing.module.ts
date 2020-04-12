@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { Shell } from '@app/shell/shell.service';
 import { SectionComponent } from './section.component';
-import { ResolverGuard } from '@digipop/core';
+import { SectionGuard } from '@digipop/core';
 
 const routes: Routes = [
   Shell.childRoutes([
@@ -13,7 +13,7 @@ const routes: Routes = [
       children: [],
       pathMatch: 'full',
       resolve: {
-        script: ResolverGuard
+        script: SectionGuard
       }
     }
   ])
