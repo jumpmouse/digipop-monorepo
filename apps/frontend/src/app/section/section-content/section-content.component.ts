@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ProgramskaCelinaSadrzaj } from '@digipop/models';
 
 @Component({
   selector: 'digipop-section-content',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./section-content.component.scss']
 })
 export class SectionContentComponent implements OnInit {
-  @Input() subsectionContent: object;
+  @Input() subsectionContent: ProgramskaCelinaSadrzaj;
 
   constructor() {}
 
