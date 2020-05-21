@@ -1,27 +1,56 @@
 <div class="row">
-  <div class="d-none d-lg-block col-lg-3 align-self-start sticky-top">
-    <div class="panel" title="Sadržaj" id="content-summary">
+  <div class="d-none d-lg-block col-lg-3 align-self-start sticky-top sidebar">
+    <div class="panel " id="content-summary">
       <ng-container *ngIf="subsections.length">
-        <div class="display-5 page-title pt-2">
-          <u>{{ section.naziv }}</u>
-        </div>
+        <div class="display-6 page-title pt-3 pb-1">{{ courseName }}</div>
+        <div class="display-7 page-title">{{ section.naziv }}</div>
+        <hr class="my-2" />
       </ng-container>
 
-      <ng-container *ngFor="let subsection of subsections">
-        <a
-          [routerLink]="['/' + subsection.link]"
-          [class.sidebar-link-active]="subsection.fragment === fragment"
-          [fragment]="subsection.fragment"
-          class="section-link h5 d-block"
-        >
-          <small>{{ subsection.key }} {{ subsection.name }}</small>
-        </a>
-      </ng-container>
+      <div class="sidemenu-container">
+        <ng-container *ngFor="let subsection of subsections">
+          <a
+            [routerLink]="['/' + subsection.link]"
+            [class.sidebar-link-active]="subsection.fragment === fragment"
+            [fragment]="subsection.fragment"
+            class="section-link h5 d-block"
+          >
+            <small>{{ subsection.key }} {{ subsection.name }}</small>
+          </a>
+        </ng-container>
+      </div>
     </div>
   </div>
   <div class="col-xs-12 col-lg-9">
     <digipop-section-content
       [subsectionContent]="subsectionContent"
     ></digipop-section-content>
+    <div class="pagination row">
+      <div class="col-xs-12 col-lg-6">
+        <ng-container *ngIf="previousFragment">
+          <a
+            [routerLink]="['/' + previousFragment.link]"
+            [class.sidebar-link-active]="previousFragment.fragment === fragment"
+            [fragment]="previousFragment.fragment"
+            class="pagination-link h5 d-block btn btn-light"
+          >
+            <<< {{ previousFragment.key }} {{ previousFragment.name }}
+          </a>
+        </ng-container>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <ng-container *ngIf="nextFragment">
+          <a
+            [routerLink]="['/' + nextFragment.link]"
+            [class.sidebar-link-active]="nextFragment.fragment === fragment"
+            [fragment]="nextFragment.fragment"
+            class="pagination-link h5 d-block btn btn-light"
+          >
+            {{ nextFragment.key }} {{ nextFragment.name }} >>>
+          </a>
+        </ng-container>
+      </div>
+      <div class="col-xs-12 bottom-spacer"></div>
+    </div>
   </div>
 </div>

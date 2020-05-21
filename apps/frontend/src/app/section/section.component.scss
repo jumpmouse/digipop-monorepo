@@ -8,8 +8,30 @@
 }
 
 .section-link {
-  color: $dark-red !important;
+  color: $dark !important;
   margin-bottom: 0.3rem;
   line-height: 1;
   font-style: italic;
+}
+
+.pagination-link {
+  color: white !important;
+  background-color: $dark-red !important;
+  // margin-bottom: 0.3rem;
+  // line-height: 1;
+  // font-style: italic;
+  display: block;
+}
+
+.sidemenu-container {
+  // margin: 0.5rem 0;
+  padding-left: 0.5rem;
+}
+
+.bottom-spacer {
+  min-height: 200px;
+}
+
+.sidebar {
+  top: 72px;
 }
