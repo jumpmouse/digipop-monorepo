@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="d-none d-lg-block col-lg-3 align-self-start sticky-top">
+  <div class="d-none d-lg-block col-lg-3 align-self-start sticky-top sidebar">
     <div class="panel " id="content-summary">
       <ng-container *ngIf="subsections.length">
         <div class="display-6 page-title pt-3 pb-1">{{ courseName }}</div>
@@ -25,5 +25,25 @@
     <digipop-section-content
       [subsectionContent]="subsectionContent"
     ></digipop-section-content>
+    <div class="pagination row">
+      <div class="col-xs-12 col-lg-6">
+        <ng-container *ngIf="previousFragment">
+          <a [routerLink]="['/' + previousFragment.link]"
+            [class.sidebar-link-active]="previousFragment.fragment === fragment" [fragment]="previousFragment.fragment"
+            class="pagination-link h5 d-block btn btn-light">
+            <<< {{ previousFragment.key }} {{ previousFragment.name }}
+          </a>
+        </ng-container>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <ng-container *ngIf="nextFragment">
+          <a [routerLink]="['/' + nextFragment.link]" [class.sidebar-link-active]="nextFragment.fragment === fragment"
+            [fragment]="nextFragment.fragment" class="pagination-link h5 d-block btn btn-light">
+            {{ nextFragment.key }} {{ nextFragment.name }} >>>
+          </a>
+        </ng-container>
+      </div>
+      <div class="col-xs-12 bottom-spacer"></div>
+    </div>
   </div>
 </div>

@@ -29,6 +29,8 @@ export class SectionComponent implements OnInit {
   subsections: SimpleLinkObject[];
   fragment: string;
   courseName: string;
+  previousFragment: SimpleLinkObject;
+  nextFragment: SimpleLinkObject;
   private courseLink: string;
   private courseId: string;
   private sectionLink: string;
@@ -72,6 +74,25 @@ export class SectionComponent implements OnInit {
         return;
       }
 
+      console.log(fragment);
+      console.log(this.subsections);
+      const subsectionsCount = this.subsections.length;
+      const currentFragmentIndex = this.subsections.findIndex(subsection => subsection.fragment === fragment);
+      console.log(currentFragmentIndex);
+      if (subsectionsCount && currentFragmentIndex !== -1) {
+        if (currentFragmentIndex === (subsectionsCount - 1)) {
+          this.nextFragment = undefined;
+        } else {
+          const nextIndex = currentFragmentIndex + 1;
+          this.nextFragment = this.subsections[nextIndex];
+        }
+        if (currentFragmentIndex === 0) {
+          this.previousFragment = undefined;
+        } else {
+          const previousIndex = currentFragmentIndex - 1;
+          this.previousFragment = this.subsections[previousIndex];
+        }
+      }
       const fragmentMetaData = fragment.split('_');
       this.fragment = fragment;
       this.fragmentId = fragmentMetaData[0];
