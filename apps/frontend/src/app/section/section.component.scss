@@ -2,9 +2,9 @@
 
 .sidebar-link-active {
   text-decoration: underline;
-    &>small {
-      font-weight: bold;
-    }
+  & > small {
+    font-weight: bold;
+  }
 }
 
 .section-link {

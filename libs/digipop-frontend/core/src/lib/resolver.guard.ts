@@ -20,7 +20,7 @@ export class ResolverGuard implements Resolve<Skripta | boolean> {
     }
     return this.queryService.getScriptContent().pipe(
       map((script: Skripta) => {
-        const skripta =  JSON.parse(JSON.stringify(script));
+        const skripta = JSON.parse(JSON.stringify(script));
         this.scriptContentService.setScriptContent(skripta);
         this.projectsService.prepareProjectsFromPredmeti(skripta.predmeti);
         return skripta;

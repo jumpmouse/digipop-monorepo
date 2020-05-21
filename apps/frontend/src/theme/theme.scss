@@ -7,10 +7,10 @@ body {
   color: $dark;
 }
 
- .jumbotron {
+.jumbotron {
   margin-top: 15px;
   padding: 2rem;
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
 body .ck.ck-content {
@@ -58,7 +58,8 @@ body .ck.ck-content {
 
 .card {
   border-radius: 0;
-  box-shadow: 0px 0px 1px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12) !important;
+  box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
   .accordion > .card {
     box-shadow: none !important;
   }

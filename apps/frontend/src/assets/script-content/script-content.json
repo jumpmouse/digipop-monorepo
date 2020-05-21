@@ -95,10 +95,7 @@
           "link": "pez-II_modeli-rasta",
           "URL_slike": "",
           "redosled": 1,
-          "redosled_programskih_celina": [
-            "pez-II-1",
-            "pez-II-2"
-          ],
+          "redosled_programskih_celina": ["pez-II-1", "pez-II-2"],
           "programske_celine": {
             "pez-II-1": {
               "id": "pez-II-1",
@@ -136,11 +133,7 @@
           "link": "оez-I_ekoloska-valenca",
           "URL_slike": "",
           "redosled": 1,
-          "redosled_programskih_celina": [
-            "оez-I-1",
-            "оez-I-2",
-            "оez-I-3"
-          ],
+          "redosled_programskih_celina": ["оez-I-1", "оez-I-2", "оez-I-3"],
           "programske_celine": {
             "оez-I-1": {
               "id": "оez-I-1",
@@ -175,10 +168,7 @@
           "link": "оez-II_ekoloska-nisa",
           "URL_slike": "",
           "redosled": 1,
-          "redosled_programskih_celina": [
-            "оez-II-1",
-            "оez-II-2"
-          ],
+          "redosled_programskih_celina": ["оez-II-1", "оez-II-2"],
           "programske_celine": {
             "оez-II-1": {
               "id": "оez-II-1",
@@ -205,10 +195,7 @@
           "link": "оez-III_prostorni-raspored-jedinki-u-populaciji",
           "URL_slike": "",
           "redosled": 1,
-          "redosled_programskih_celina": [
-            "оez-III-1",
-            "оez-III-2"
-          ],
+          "redosled_programskih_celina": ["оez-III-1", "оez-III-2"],
           "programske_celine": {
             "оez-III-1": {
               "id": "оez-III-1",
@@ -235,11 +222,7 @@
           "link": "оez-IV_kvantitativne-metode-za-odredjivanje-brojnosti-jedinki-u-populaciji",
           "URL_slike": "",
           "redosled": 1,
-          "redosled_programskih_celina": [
-            "оez-IV-1",
-            "оez-IV-2",
-            "оez-IV-3"
-          ],
+          "redosled_programskih_celina": ["оez-IV-1", "оez-IV-2", "оez-IV-3"],
           "programske_celine": {
             "оez-IV-1": {
               "id": "оez-IV-1",

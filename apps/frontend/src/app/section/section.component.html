@@ -2,7 +2,9 @@
   <div class="d-none d-lg-block col-lg-3 align-self-start sticky-top">
     <div class="panel" title="Sadržaj" id="content-summary">
       <ng-container *ngIf="subsections.length">
-        <div class="display-5 page-title pt-2"><u>{{ section.naziv }}</u></div>
+        <div class="display-5 page-title pt-2">
+          <u>{{ section.naziv }}</u>
+        </div>
       </ng-container>
 
       <ng-container *ngFor="let subsection of subsections">

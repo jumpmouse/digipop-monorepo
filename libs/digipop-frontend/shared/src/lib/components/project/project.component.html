@@ -36,13 +36,22 @@
       </mdb-card-text>
     </ng-container>
 
-
     <!--Text-->
-    <mdb-card-text *ngIf="projectType === 'section' && project.sections && project.sections.length">
+    <mdb-card-text
+      *ngIf="
+        projectType === 'section' && project.sections && project.sections.length
+      "
+    >
       <hr class="my-2" />
       <ng-container *ngFor="let section of project.sections">
-        <a [routerLink]="['/' + section.link]" [fragment]="section.fragment" class="section-link h5 d-block">
-          <small><b>{{ section.key }}</b> {{ section.name }}</small>
+        <a
+          [routerLink]="['/' + section.link]"
+          [fragment]="section.fragment"
+          class="section-link h5 d-block"
+        >
+          <small
+            ><b>{{ section.key }}</b> {{ section.name }}</small
+          >
         </a>
       </ng-container>
     </mdb-card-text>

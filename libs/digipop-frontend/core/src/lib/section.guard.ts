@@ -46,7 +46,7 @@ export class SectionGuard implements Resolve<OblastSadrzaj> {
     }
 
     const scriptObs = this.queryService.getScriptContent().pipe(
-      map((script:Skripta) => {
+      map((script: Skripta) => {
         const skripta = JSON.parse(JSON.stringify(script));
         this.scriptContentService.setScriptContent(skripta);
         this.projectsService.prepareProjectsFromPredmeti(skripta.predmeti);
