@@ -60,6 +60,23 @@ body .ck.ck-content {
   border-radius: 0;
   box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.16),
     0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+  & > a {
+    padding: 3px;
+    & img {
+      box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+    &::after {
+      box-shadow: 0px 0px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    &:hover {
+      box-shadow: 0 0 5px black;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
+  }
   .accordion > .card {
     box-shadow: none !important;
   }

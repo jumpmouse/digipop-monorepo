@@ -18,7 +18,7 @@
           "naziv": "Demografija",
           "opis": "opis oblasti",
           "link": "pez-I_demografija",
-          "URL_slike": "",
+          "URL_slike": "/assets/script-content/images/demografija.jpg",
           "redosled": 1,
           "redosled_programskih_celina": [
             "pez-I-1",
@@ -93,7 +93,7 @@
           "naziv": "Modeli rasta",
           "opis": "opis oblasti",
           "link": "pez-II_modeli-rasta",
-          "URL_slike": "",
+          "URL_slike": "/assets/script-content/images/modeli-rasta.gif",
           "redosled": 1,
           "redosled_programskih_celina": ["pez-II-1", "pez-II-2"],
           "programske_celine": {
@@ -131,7 +131,7 @@
           "naziv": "Ekološka valenca",
           "opis": "opis oblasti",
           "link": "оez-I_ekoloska-valenca",
-          "URL_slike": "",
+          "URL_slike": "/assets/script-content/images/ekoloska-valenca.png",
           "redosled": 1,
           "redosled_programskih_celina": ["оez-I-1", "оez-I-2", "оez-I-3"],
           "programske_celine": {
@@ -166,7 +166,7 @@
           "naziv": "Ekološka niša",
           "opis": "opis oblasti",
           "link": "оez-II_ekoloska-nisa",
-          "URL_slike": "",
+          "URL_slike": "/assets/script-content/images/ekoloska-nisa.png",
           "redosled": 1,
           "redosled_programskih_celina": ["оez-II-1", "оez-II-2"],
           "programske_celine": {
@@ -193,7 +193,7 @@
           "naziv": "Prostorni raspored jedinki u populaciji",
           "opis": "opis oblasti",
           "link": "оez-III_prostorni-raspored-jedinki-u-populaciji",
-          "URL_slike": "",
+          "URL_slike": "/assets/script-content/images/prostorni-raspored.jpg",
           "redosled": 1,
           "redosled_programskih_celina": ["оez-III-1", "оez-III-2"],
           "programske_celine": {
@@ -220,7 +220,7 @@
           "naziv": "Kvantitativne metode za određivanje brojnosti jedinki u populaciji",
           "opis": "opis oblasti",
           "link": "оez-IV_kvantitativne-metode-za-odredjivanje-brojnosti-jedinki-u-populaciji",
-          "URL_slike": "",
+          "URL_slike": "/assets/script-content/images/kvantitativne-metode.jpg",
           "redosled": 1,
           "redosled_programskih_celina": ["оez-IV-1", "оez-IV-2", "оez-IV-3"],
           "programske_celine": {
