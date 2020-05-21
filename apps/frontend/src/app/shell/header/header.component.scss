@@ -1,22 +1,46 @@
 @import "src/theme/theme-variables";
 
-.navbar {
-  margin-bottom: $spacer;
-  background-color: rgb(233, 236, 239);
-}
+// body nav.navbar-digipop {
+//   margin-bottom: $spacer;
+//   background-color: rgb(233, 236, 239);
+//   font-weight: bolder;
+// }
 
 .navbar-brand,
 .navbar-brand:hover,
 .navbar-brand:focus {
   color: $dark;
 }
+.navbar-brand,
+.navbar-nav {
+  font-weight: 400;
+}
 
 .nav-link,
 .nav-link:active,
 .nav-link:focus {
   color: $dark !important;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+}
+.nav-link.active span {
+  text-decoration: underline;
 }
 
 .nav-link.dropdown-toggle {
   cursor: pointer;
+}
+
+.parent-item span {
+  color: $dark-red;
+}
+
+.subitems {
+  overflow: hidden;
+}
+
+.subitem {
+  padding-left: 1rem;
+  box-sizing: border-box;
+  font-size: 0.9em;
 }

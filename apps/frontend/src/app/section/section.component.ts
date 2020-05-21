@@ -28,9 +28,9 @@ export class SectionComponent implements OnInit {
   };
   subsections: SimpleLinkObject[];
   fragment: string;
+  courseName: string;
   private courseLink: string;
   private courseId: string;
-  private courseName: string;
   private sectionLink: string;
   private sectionId: string;
   private sectionName: string;
@@ -56,7 +56,7 @@ export class SectionComponent implements OnInit {
       if (this.sectionId !== sectionMetaData[0]) {
         this.courseLink = param.courseName;
         this.courseId = courseMetaData[0];
-        this.courseName = courseMetaData[1];
+        this.courseName = script.predmeti[this.courseId].naziv;
         this.sectionLink = param.sectionName;
         this.sectionId = sectionMetaData[0];
         this.sectionName = sectionMetaData[1];

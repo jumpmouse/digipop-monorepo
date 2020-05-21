@@ -8,8 +8,13 @@
 }
 
 .section-link {
-  color: $dark-red !important;
+  color: $dark !important;
   margin-bottom: 0.3rem;
   line-height: 1;
   font-style: italic;
+}
+
+.sidemenu-container {
+  // margin: 0.5rem 0;
+  padding-left: 0.5rem;
 }

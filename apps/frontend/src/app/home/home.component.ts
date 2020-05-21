@@ -25,7 +25,7 @@ export class ContentManagementComponent implements OnInit {
     this.isLoading = true;
     this.scriptContentService.scriptContent
       .pipe(skipWhile(script => !script))
-      .subscribe(script => {
+      .subscribe((script: Skripta) => {
         this.predmeti = this.prepareProjects();
         this.isLoading = false;
         this.script = {
