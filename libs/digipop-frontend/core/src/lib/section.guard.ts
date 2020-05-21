@@ -30,8 +30,8 @@ export class SectionGuard implements Resolve<OblastSadrzaj> {
     const sectionContentObs: Observable<OblastSadrzaj> = this.queryService
       .getSectionContent(route.params.sectionName)
       .pipe(
-        map((sectionContent: { data: OblastSadrzaj }) => {
-          const sadrzaj = sectionContent.data;
+        map((sectionContent: OblastSadrzaj) => {
+          const sadrzaj = sectionContent;
           this.scriptContentService.setSectionContent(
             courseId,
             sectionId,
@@ -46,11 +46,11 @@ export class SectionGuard implements Resolve<OblastSadrzaj> {
     }
 
     const scriptObs = this.queryService.getScriptContent().pipe(
-      map((script: { data: Skripta }) => {
-        const skripta = script.data;
+      map((script:Skripta) => {
+        const skripta = JSON.parse(JSON.stringify(script));
         this.scriptContentService.setScriptContent(skripta);
         this.projectsService.prepareProjectsFromPredmeti(skripta.predmeti);
-        return script.data;
+        return skripta;
       })
     );
 

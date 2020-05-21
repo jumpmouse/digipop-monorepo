@@ -1,0 +1,12 @@
+@import "../../theme/theme-variables";
+
+.course-title {
+  margin: 1rem 1rem 0;
+  & p {
+    & .subtitle {
+      color: $dark-red;
+      font-weight: bolder;
+      font-style: italic;
+    }
+  }
+}

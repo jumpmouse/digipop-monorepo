@@ -15,15 +15,19 @@ export class QueryService {
     return this.http.request('get', `/${resource}`, { headers: this.headers });
   }
 
-  getScriptContent(): Observable<{ data: Skripta }> {
-    return this.http.request<{ data: Skripta }>('get', `/script-content`, {
-      headers: this.headers
-    });
-  }
-  getSectionContent(sectionName: string): Observable<{ data: OblastSadrzaj }> {
-    return this.http.request<{ data: OblastSadrzaj }>(
+  getScriptContent(): Observable<Skripta> {
+    return this.http.request<Skripta>(
       'get',
-      `/script-content/${sectionName}`,
+      `/assets/script-content/script-content.json`,
+      {
+        headers: this.headers
+      }
+    );
+  }
+  getSectionContent(sectionName: string): Observable<OblastSadrzaj> {
+    return this.http.request<OblastSadrzaj>(
+      'get',
+      `/assets/script-content/${sectionName}.json`,
       {
         headers: this.headers
       }

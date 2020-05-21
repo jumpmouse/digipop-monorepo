@@ -21,7 +21,11 @@ export class SectionComponent implements OnInit {
   course: ContentMetaData;
   content: string;
   section: Oblast;
-  subsectionContent: ProgramskaCelinaSadrzaj;
+  subsectionContent: ProgramskaCelinaSadrzaj = {
+    id: '',
+    naziv: '',
+    tekst: ''
+  };
   subsections: SimpleLinkObject[];
   fragment: string;
   private courseLink: string;
@@ -72,9 +76,7 @@ export class SectionComponent implements OnInit {
       this.fragment = fragment;
       this.fragmentId = fragmentMetaData[0];
       this.fragmentName = fragmentMetaData[1];
-      this.subsectionContent = this.scriptContentService.scriptData[
-        this.courseId
-      ][this.sectionId][this.fragment];
+      this.subsectionContent = this.scriptContentService.scriptData[this.courseId][this.sectionId][this.fragment];
     });
   }
 

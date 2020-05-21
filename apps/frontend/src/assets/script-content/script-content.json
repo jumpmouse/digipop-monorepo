@@ -1,0 +1,273 @@
+{
+  "naslov": "E-SKRIPTA",
+  "podnaslov": "iz predmeta Opšta ekologija životinja i Populaciona ekologija životinja",
+  "opis_ukratko": "Kratki opis skripte. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "opis": "Opširan opis skripte. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "predmeti": {
+    "pez": {
+      "id": "pez",
+      "naziv": "Populaciona ekologija životinja",
+      "kratki_opis": "Sticanje znanja iz populacione ekologije životinja i obuka studenata da rešavaju konkretne probleme utvrđivanja ekološkog statusa i statusa ugroženosti i zaštite životinjskih populacija",
+      "opis": "Student će razumeti značaj populacionog nivoa organizacije posebno u oblastima konkretne primene, razumeti kako su populacije organizovane i integrisane, znati da analiziraju, procene i primene populacione atribute i procese, znati da analiziraju i procene i mehanizme populacionog rasta i faktore populacione dinamike, znati da utvrde i analiziraju parametre populacionih interakcija i interpretiraju njihov uticaj na ekološki status populacija, umeti da formiraju, analiziraju i interpretiraju populacione modele i donose zaključke o ekološkom statusu i stanju ugroženosti na konkretnim primerima.",
+      "link": "pez_populaciona-ekologija-zivotinja",
+      "URL_slike": "",
+      "redosled": 1,
+      "oblasti": {
+        "pez-I": {
+          "id": "pez-I",
+          "naziv": "Demografija",
+          "opis": "opis oblasti",
+          "link": "pez-I_demografija",
+          "URL_slike": "",
+          "redosled": 1,
+          "redosled_programskih_celina": [
+            "pez-I-1",
+            "pez-I-2",
+            "pez-I-3",
+            "pez-I-4",
+            "pez-I-5",
+            "pez-I-6",
+            "pez-I-7"
+          ],
+          "programske_celine": {
+            "pez-I-1": {
+              "id": "pez-I-1",
+              "naziv": "Uvod",
+              "link": "pez-I-1_uvod",
+              "URL_slike": "",
+              "tekst": "uvodni tekst ovde",
+              "redna_oznaka": "1"
+            },
+            "pez-I-2": {
+              "id": "pez-I-2",
+              "naziv": "Demografske tablice",
+              "link": "pez-I-2_demografske-tablice",
+              "URL_slike": "",
+              "tekst": "tekst demografskih tablica",
+              "redna_oznaka": "2"
+            },
+            "pez-I-3": {
+              "id": "pez-I-3",
+              "naziv": "Mortalitet",
+              "link": "pez-I-3_mortalitet",
+              "URL_slike": "",
+              "tekst": "tekst o mortalitetu",
+              "redna_oznaka": "3"
+            },
+            "pez-I-4": {
+              "id": "pez-I-4",
+              "naziv": "Tipovi preživljavanja",
+              "link": "pez-I-4_tipovi-prezivljavanja",
+              "URL_slike": "",
+              "tekst": "tekst o tipovima prezivljavanja",
+              "redna_oznaka": "3.1"
+            },
+            "pez-I-5": {
+              "id": "pez-I-5",
+              "naziv": "Natalitet",
+              "link": "pez-I-5_natalitet",
+              "URL_slike": "",
+              "tekst": "natalitet tekst",
+              "redna_oznaka": "4"
+            },
+            "pez-I-6": {
+              "id": "pez-I-6",
+              "naziv": "Uzrasna struktura",
+              "link": "pez-I-6_uzrasna-struktura",
+              "URL_slike": "",
+              "tekst": "tekst o uzrasnoj strukturi",
+              "redna_oznaka": "5"
+            },
+            "pez-I-7": {
+              "id": "pez-I-7",
+              "naziv": "Dostizanje stabilne uzrasne strukture",
+              "link": "pez-I-7_dostizanje-stabilne-uzrasne-strukture",
+              "URL_slike": "",
+              "tekst": "tekst o tome kako se dostize stabilna uzrasna struktura",
+              "redna_oznaka": "5.1"
+            }
+          }
+        },
+        "pez-II": {
+          "id": "pez-II",
+          "naziv": "Modeli rasta",
+          "opis": "opis oblasti",
+          "link": "pez-II_modeli-rasta",
+          "URL_slike": "",
+          "redosled": 1,
+          "redosled_programskih_celina": [
+            "pez-II-1",
+            "pez-II-2"
+          ],
+          "programske_celine": {
+            "pez-II-1": {
+              "id": "pez-II-1",
+              "naziv": "Modeli eksponencijalnog rasta",
+              "link": "pez-II-1_modeli-eksponencialnog-rasta",
+              "URL_slike": "",
+              "tekst": "uvodni tekst ovde",
+              "redna_oznaka": "1"
+            },
+            "pez-II-2": {
+              "id": "pez-II-2",
+              "naziv": "Modeli logističog rasta",
+              "link": "pez-II-2_modeli-logistickog-rasta",
+              "URL_slike": "",
+              "tekst": "tekst logistikog rasta",
+              "redna_oznaka": "2"
+            }
+          }
+        }
+      }
+    },
+    "oez": {
+      "id": "oez",
+      "naziv": "Opšta ekologija životinja",
+      "kratki_opis": "Upoznavanje studenata sa raznovrsnoću ekoloških formi, trofičkih odnosa i biotičkih interakcija koje životinje ostvaruju u svojim populacijama i unutar zajednica",
+      "opis": "Studenti će razumeti ulogu životinja u prirodi i značaj žaštite životinja u očuvanju biodiverziteta. Znaće da interpretiraju mehanizme delovanja ekoloških faktore važnih za opstanak životinja. Imaće jasan pregled raznovrsnosti ekoloških interakcija značajnih za životinje. Poznavaće osnovne populacione strategije.",
+      "link": "oez_opsta-ekologija-zivotinja",
+      "URL_slike": "",
+      "redosled": 2,
+      "oblasti": {
+        "оez-I": {
+          "id": "оez-I",
+          "naziv": "Ekološka valenca",
+          "opis": "opis oblasti",
+          "link": "оez-I_ekoloska-valenca",
+          "URL_slike": "",
+          "redosled": 1,
+          "redosled_programskih_celina": [
+            "оez-I-1",
+            "оez-I-2",
+            "оez-I-3"
+          ],
+          "programske_celine": {
+            "оez-I-1": {
+              "id": "оez-I-1",
+              "naziv": "Ekološka valenca",
+              "link": "оez-I-1_ekoloska-valenca",
+              "URL_slike": "",
+              "tekst": "uvodni tekst ovde",
+              "redna_oznaka": "1"
+            },
+            "оez-I-2": {
+              "id": "оez-I-2",
+              "naziv": "Bivalence",
+              "link": "оez-I-2_bivalence",
+              "URL_slike": "",
+              "tekst": "tekst",
+              "redna_oznaka": "2"
+            },
+            "оez-I-3": {
+              "id": "оez-I-3",
+              "naziv": "Prostorno-vremenska varijabilnost ekoloških faktora",
+              "link": "оez-I-3_prostorno-vremenska-varijabilnost-ekoloskih-faktora",
+              "URL_slike": "",
+              "tekst": "tekst",
+              "redna_oznaka": "3"
+            }
+          }
+        },
+        "оez-II": {
+          "id": "оez-II",
+          "naziv": "Ekološka niša",
+          "opis": "opis oblasti",
+          "link": "оez-II_ekoloska-nisa",
+          "URL_slike": "",
+          "redosled": 1,
+          "redosled_programskih_celina": [
+            "оez-II-1",
+            "оez-II-2"
+          ],
+          "programske_celine": {
+            "оez-II-1": {
+              "id": "оez-II-1",
+              "naziv": "Korišćenje resursa dve vrste guštera",
+              "link": "оez-II-1_koriscenje-resursa-dve-vrste-gustera",
+              "URL_slike": "",
+              "tekst": "uvodni tekst ovde",
+              "redna_oznaka": "1"
+            },
+            "оez-II-2": {
+              "id": "оez-II-2",
+              "naziv": "Prostorno mapiranje ekoloških niša",
+              "link": "оez-II-2_prostorno-mapiranje-ekoloskih-nisa",
+              "URL_slike": "",
+              "tekst": "tekst",
+              "redna_oznaka": "2"
+            }
+          }
+        },
+        "оez-III": {
+          "id": "оez-III",
+          "naziv": "Prostorni raspored jedinki u populaciji",
+          "opis": "opis oblasti",
+          "link": "оez-III_prostorni-raspored-jedinki-u-populaciji",
+          "URL_slike": "",
+          "redosled": 1,
+          "redosled_programskih_celina": [
+            "оez-III-1",
+            "оez-III-2"
+          ],
+          "programske_celine": {
+            "оez-III-1": {
+              "id": "оez-III-1",
+              "naziv": "Postupci za izračunavanje lokalnih abundanci",
+              "link": "оez-III-1_postupci-za-izracunavanje-lokalnih-abundanci",
+              "URL_slike": "",
+              "tekst": "uvodni tekst ovde",
+              "redna_oznaka": "1"
+            },
+            "оez-III-2": {
+              "id": "оez-III-2",
+              "naziv": "Metoda najbližeg suseda",
+              "link": "оez-III-2_metoda-najblizeg-suseda",
+              "URL_slike": "",
+              "tekst": "tekst",
+              "redna_oznaka": "2"
+            }
+          }
+        },
+        "оez-IV": {
+          "id": "оez-IV",
+          "naziv": "Kvantitativne metode za određivanje brojnosti jedinki u populaciji",
+          "opis": "opis oblasti",
+          "link": "оez-IV_kvantitativne-metode-za-odredjivanje-brojnosti-jedinki-u-populaciji",
+          "URL_slike": "",
+          "redosled": 1,
+          "redosled_programskih_celina": [
+            "оez-IV-1",
+            "оez-IV-2",
+            "оez-IV-3"
+          ],
+          "programske_celine": {
+            "оez-IV-1": {
+              "id": "оez-IV-1",
+              "naziv": "Cenzus i metoda probnih površina",
+              "link": "оez-IV-1_cenzus-i-metoda-probnih-površina",
+              "URL_slike": "",
+              "tekst": "uvodni tekst ovde",
+              "redna_oznaka": "1"
+            },
+            "оez-IV-2": {
+              "id": "оez-IV-2",
+              "naziv": "Analiza plana uzorkovanja",
+              "link": "оez-IV-2_analiza-plana-uzorkovanja",
+              "URL_slike": "",
+              "tekst": "tekst",
+              "redna_oznaka": "2"
+            },
+            "оez-IV-3": {
+              "id": "оez-IV-3",
+              "naziv": "Metode markiranja i ponovnog ulova",
+              "link": "оez-IV-3_metode-markiranja-i-ponovnog-ulova",
+              "URL_slike": "",
+              "tekst": "tekst",
+              "redna_oznaka": "3"
+            }
+          }
+        }
+      }
+    }
+  }
+}

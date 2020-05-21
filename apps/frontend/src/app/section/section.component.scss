@@ -1,4 +1,15 @@
+@import "../../theme/theme-variables";
+
 .sidebar-link-active {
   text-decoration: underline;
-  color: #004b91;
+    &>small {
+      font-weight: bold;
+    }
+}
+
+.section-link {
+  color: $dark-red !important;
+  margin-bottom: 0.3rem;
+  line-height: 1;
+  font-style: italic;
 }

@@ -49,7 +49,7 @@ export class CourseComponent implements OnInit {
     return {
       title: predmet.naziv,
       subtitle: '',
-      shortDescription: '',
+      shortDescription: predmet.kratki_opis,
       description: predmet.opis
     };
   }

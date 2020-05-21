@@ -27,35 +27,24 @@
         </h4>
       </a>
     </mdb-card-title>
-    <hr class="my-2" />
 
     <!--Text-->
-    <mdb-card-text>
-      {{ project.description }}
-    </mdb-card-text>
-
-    <!--Text-->
-    <mdb-card-text *ngIf="project.sections && project.sections.length">
+    <ng-container *ngIf="projectType !== 'section'">
       <hr class="my-2" />
-      <ngb-accordion
-        #acc="ngbAccordion"
-        type="dark"
-        [activeIds]="projectType === 'section' ? 'static-' + index : ''"
-      >
-        <ngb-panel title="Sadržaj" [id]="'static-' + index">
-          <ng-template ngbPanelContent>
-            <ng-container *ngFor="let section of project.sections">
-              <a
-                [routerLink]="['/' + section.link]"
-                [fragment]="section.fragment"
-                class="section-link h5 d-block"
-              >
-                <small>{{ section.key }} {{ section.name }}</small>
-              </a>
-            </ng-container>
-          </ng-template>
-        </ngb-panel>
-      </ngb-accordion>
+      <mdb-card-text>
+        {{ project.description }}
+      </mdb-card-text>
+    </ng-container>
+
+
+    <!--Text-->
+    <mdb-card-text *ngIf="projectType === 'section' && project.sections && project.sections.length">
+      <hr class="my-2" />
+      <ng-container *ngFor="let section of project.sections">
+        <a [routerLink]="['/' + section.link]" [fragment]="section.fragment" class="section-link h5 d-block">
+          <small><b>{{ section.key }}</b> {{ section.name }}</small>
+        </a>
+      </ng-container>
     </mdb-card-text>
   </mdb-card-body>
 </mdb-card>
