@@ -10,7 +10,7 @@ export const environment = {
   production: true,
   hmr: false,
   version: env.npm_package_version,
-  serverUrl: 'https://digipop.bio.bg.ac.rs/api',
+  serverUrl: 'https://digipop.bio.bg.ac.rs',
   defaultLanguage: 'en-US',
   supportedLanguages: ['en-US']
 };

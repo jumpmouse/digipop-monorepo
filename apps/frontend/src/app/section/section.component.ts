@@ -21,7 +21,11 @@ export class SectionComponent implements OnInit {
   course: ContentMetaData;
   content: string;
   section: Oblast;
-  subsectionContent: ProgramskaCelinaSadrzaj;
+  subsectionContent: ProgramskaCelinaSadrzaj = {
+    id: '',
+    naziv: '',
+    tekst: ''
+  };
   subsections: SimpleLinkObject[];
   fragment: string;
   private courseLink: string;

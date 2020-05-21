@@ -2,6 +2,19 @@
 
 .navbar {
   margin-bottom: $spacer;
+  background-color: rgb(233, 236, 239);
+}
+
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: $dark;
+}
+
+.nav-link,
+.nav-link:active,
+.nav-link:focus {
+  color: $dark !important;
 }
 
 .nav-link.dropdown-toggle {

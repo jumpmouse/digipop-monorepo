@@ -1,11 +1,16 @@
+@import "theme-variables";
 /*
  * Global application theme.
  * Framework overrides and customization goes here.
  */
+body {
+  color: $dark;
+}
+
 .jumbotron {
   margin-top: 15px;
   padding: 2rem;
-  //   background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
 body .ck.ck-content {
@@ -49,4 +54,31 @@ body .ck.ck-content {
     /* stylelint-disable-next-line declaration-no-important */
     width: calc(25% - 2rem) !important;
   }
+}
+
+.card {
+  border-radius: 0;
+  box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+  .accordion > .card {
+    box-shadow: none !important;
+  }
+  .card-body .card-text {
+    color: $dark !important;
+  }
+}
+
+.display-5 {
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 2em;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border-top-color: rgba(192, 57, 43, 0.4);
+}
+
+.page-title {
+  color: $dark-red;
 }

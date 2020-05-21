@@ -19,11 +19,11 @@ export class ResolverGuard implements Resolve<Skripta | boolean> {
       return true;
     }
     return this.queryService.getScriptContent().pipe(
-      map((script: { data: Skripta }) => {
-        const skripta = script.data;
+      map((script: Skripta) => {
+        const skripta = JSON.parse(JSON.stringify(script));
         this.scriptContentService.setScriptContent(skripta);
         this.projectsService.prepareProjectsFromPredmeti(skripta.predmeti);
-        return script.data;
+        return skripta;
       })
     );
   }

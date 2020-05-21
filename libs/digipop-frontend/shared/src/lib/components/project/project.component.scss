@@ -1,3 +1,18 @@
 .title-link {
-  color: inherit;
+  color: #c0392b;
+  font-style: italic;
+  & > * {
+    margin-bottom: 1rem;
+  }
+}
+.fa-link {
+  color: #c0392b !important;
+  margin: 0 0 0 -10px;
+}
+.section-link {
+  color: #333333 !important;
+  margin-bottom: 0.3rem;
+  line-height: 1;
+  font-style: italic;
+  padding: 0 0.5rem;
 }
