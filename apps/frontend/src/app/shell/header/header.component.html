@@ -14,30 +14,32 @@
   <links>
     <ul class="navbar-nav mr-auto">
       <ng-container *ngFor="let menuItem of scriptMenu">
-      <li class="nav-item">
-        <a
-          class="nav-link parent-item"
-          [routerLink]="menuItem.link"
-          routerLinkActive="active"
-        >
-          <i class="fas fa-graduation-cap"></i>
-          <span translate> {{menuItem.title}}</span>
-        </a>
-        <ng-container *ngIf="menuItem.subItems.length">
-              <ul class="navbar-nav mr-auto d-lg-none d-xl-none subitems">
-                <ng-container *ngFor="let subitem of menuItem.subItems">
-                  <li class="nav-item subitem">
-                    <a class="nav-link" [routerLink]="subitem.link" routerLinkActive="active">
-                      <i class="fas fa-user-graduate"></i>
-                      <span translate> {{subitem.title}}</span>
-                    </a>
-                  </li>
-                </ng-container>
-              </ul>
-
-        </ng-container>
-
-      </li>
+        <li class="nav-item">
+          <a
+            class="nav-link parent-item"
+            [routerLink]="menuItem.link"
+            routerLinkActive="active"
+          >
+            <i class="fas fa-graduation-cap"></i>
+            <span translate> {{ menuItem.title }}</span>
+          </a>
+          <ng-container *ngIf="menuItem.subItems.length">
+            <ul class="navbar-nav mr-auto d-lg-none d-xl-none subitems">
+              <ng-container *ngFor="let subitem of menuItem.subItems">
+                <li class="nav-item subitem">
+                  <a
+                    class="nav-link"
+                    [routerLink]="subitem.link"
+                    routerLinkActive="active"
+                  >
+                    <i class="fas fa-user-graduate"></i>
+                    <span translate> {{ subitem.title }}</span>
+                  </a>
+                </li>
+              </ng-container>
+            </ul>
+          </ng-container>
+        </li>
       </ng-container>
     </ul>
     <ul class="navbar-nav ml-auto">

@@ -28,17 +28,24 @@
     <div class="pagination row">
       <div class="col-xs-12 col-lg-6">
         <ng-container *ngIf="previousFragment">
-          <a [routerLink]="['/' + previousFragment.link]"
-            [class.sidebar-link-active]="previousFragment.fragment === fragment" [fragment]="previousFragment.fragment"
-            class="pagination-link h5 d-block btn btn-light">
+          <a
+            [routerLink]="['/' + previousFragment.link]"
+            [class.sidebar-link-active]="previousFragment.fragment === fragment"
+            [fragment]="previousFragment.fragment"
+            class="pagination-link h5 d-block btn btn-light"
+          >
             <<< {{ previousFragment.key }} {{ previousFragment.name }}
           </a>
         </ng-container>
       </div>
       <div class="col-xs-12 col-lg-6">
         <ng-container *ngIf="nextFragment">
-          <a [routerLink]="['/' + nextFragment.link]" [class.sidebar-link-active]="nextFragment.fragment === fragment"
-            [fragment]="nextFragment.fragment" class="pagination-link h5 d-block btn btn-light">
+          <a
+            [routerLink]="['/' + nextFragment.link]"
+            [class.sidebar-link-active]="nextFragment.fragment === fragment"
+            [fragment]="nextFragment.fragment"
+            class="pagination-link h5 d-block btn btn-light"
+          >
             {{ nextFragment.key }} {{ nextFragment.name }} >>>
           </a>
         </ng-container>

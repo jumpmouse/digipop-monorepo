@@ -63,16 +63,22 @@ export class HeaderComponent implements OnInit {
     return credentials ? credentials.username : null;
   }
 
-  private createMenu(items: any, parentMenuItem?: any, parentMenuItemLink?: string): void {
+  private createMenu(
+    items: any,
+    parentMenuItem?: any,
+    parentMenuItemLink?: string
+  ): void {
     for (const item of Object.values(items)) {
-      const link = parentMenuItemLink ? `/${parentMenuItemLink}/${item['link']}` : `/${item['link']}`;
-      let menuItem: ScriptMenuItem = {
+      const link = parentMenuItemLink
+        ? `/${parentMenuItemLink}/${item['link']}`
+        : `/${item['link']}`;
+      const menuItem: ScriptMenuItem = {
         key: item['id'],
         title: item['naziv'],
-        link
-      }
+        link,
+        subItems: []
+      };
       if (item['oblasti']) {
-        menuItem.subItems = [];
         this.createMenu(item['oblasti'], menuItem.subItems, link);
       }
       if (parentMenuItem) {

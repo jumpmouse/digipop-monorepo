@@ -77,10 +77,12 @@ export class SectionComponent implements OnInit {
       console.log(fragment);
       console.log(this.subsections);
       const subsectionsCount = this.subsections.length;
-      const currentFragmentIndex = this.subsections.findIndex(subsection => subsection.fragment === fragment);
+      const currentFragmentIndex = this.subsections.findIndex(
+        subsection => subsection.fragment === fragment
+      );
       console.log(currentFragmentIndex);
       if (subsectionsCount && currentFragmentIndex !== -1) {
-        if (currentFragmentIndex === (subsectionsCount - 1)) {
+        if (currentFragmentIndex === subsectionsCount - 1) {
           this.nextFragment = undefined;
         } else {
           const nextIndex = currentFragmentIndex + 1;
