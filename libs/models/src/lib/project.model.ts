@@ -9,7 +9,7 @@ export interface Project {
 }
 
 export interface SimpleLinkObject {
-  key: string;
+  key?: string;
   name: string;
   link: string;
   fragment?: string;

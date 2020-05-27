@@ -1,0 +1,63 @@
+{
+  "oez-I-1_ekoloska-valenca": {
+    "id": "oez-I-1_ekoloska-valenca",
+    "naziv": "Ekološka valenca",
+    "tekst": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>",
+     "zadaci": [
+      {
+        "zadatak": "Uraditi to i to, potom uraditi sledece: ovo i ovo, izracunati ovo i pogledati ovo. prokomentarisati ovo."
+      },
+      {
+        "zadatak": "Uraditi to i to, potom uraditi sledece: ovo i ovo, izracunati ovo i pogledati ovo. prokomentarisati ovo."
+      },
+      {
+        "tehnicki_opis": "potrebno je uraditi sledece u ovom zadatku specificno....",
+        "zadatak": "Uraditi to i to, potom uraditi sledece: ovo i ovo, izracunati ovo i pogledati ovo. prokomentarisati ovo."
+      }
+    ],
+    "tehnicko_uputstvo": "potrebno je uraditi sledece: otvoriti fajl, naraviti tabelu, uneti vrednosti u tabelu i jos po nesto.",
+    "pitanja": [
+      "Pitanje 1",
+      "Pitanje 2",
+      "Pitanje 3"
+    ],
+    "fajlovi": [
+      {
+        "link": "Valence riba za studente_vežba 1.xls",
+        "opis": "Valence riba - zadatak"
+      }
+    ],
+     "reference": [
+      {
+        "opis": "Carbone, C., and J. L. Gittleman. 2002. A common rule for the scaling of carnivore density. Science 295:2273–2276."
+      },
+      {
+        "opis": "Carbone, C., and J. L. Gittleman. 2002. A common rule for the scaling of carnivore density. Science 295:2273–2276.",
+        "link": "https://pdfs.semanticscholar.org/dfdb/1252edffb2e58e6d9ca4c7e3b7f15fc580fa.pdf"
+      }
+
+    ]
+  },
+  "oez-I-2_bivalence": {
+    "id": "oez-I-2_bivalence",
+    "naziv": "Bivalence",
+    "tekst": "",
+    "fajlovi": [
+      {
+        "link": "Bivalence za studente_vežba 2.xlsx",
+        "opis": "Bivalence - zadatak"
+      }
+    ]
+  },
+  "oez-I-3_prostorno-vremenska-varijabilnost-ekoloskih-faktora": {
+    "id": "oez-I-3_prostorno-vremenska-varijabilnost-ekoloskih-faktora",
+    "naziv": "Prostorno-vremenska varijabilnost ekoloških faktora",
+    "tekst": "",
+    "fajlovi": [
+      {
+        "link": "ceratitis capitata_ vežba 3.xlsx",
+        "opis": "cratitis capitata - zadatak"
+      }
+    ]
+  }
+}

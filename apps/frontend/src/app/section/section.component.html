@@ -1,7 +1,7 @@
 <div class="row">
   <div class="d-none d-lg-block col-lg-3 align-self-start sticky-top sidebar">
     <div class="panel " id="content-summary">
-      <ng-container *ngIf="subsections.length">
+      <ng-container *ngIf="subsections && subsections.length">
         <div class="display-6 page-title pt-3 pb-1">{{ courseName }}</div>
         <div class="display-7 page-title">{{ section.naziv }}</div>
         <hr class="my-2" />
