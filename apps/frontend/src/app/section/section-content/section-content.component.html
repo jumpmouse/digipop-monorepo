@@ -1,3 +1,72 @@
 <h2 class="display-4 page-title">{{ subsectionContent.naziv }}</h2>
 <hr class="my-4" />
-<div [innerHTML]="subsectionContent.tekst"></div>
+<ng-container *ngIf="subsectionContent.tekst">
+  <div [innerHTML]="subsectionContent.tekst"></div>
+</ng-container>
+<ng-container *ngIf="subsectionContent.zadaci && subsectionContent.zadaci.length">
+  <h3 class="display-5 page-title">Zadaci</h3>
+  <hr class="my-3" />
+  <ol class="text-dark">
+  <ng-container *ngFor="let zadatak of subsectionContent.zadaci; let index;">
+    <li>
+      <div [innerHTML]="zadatak.zadatak"></div>
+      <ng-container *ngIf="zadatak.tehnicki_opis">
+        <div class="manual-title">TEHNICKO UPUTSTVO ZADATKA</div>
+        <div [innerHTML]="zadatak.tehnicki_opis"></div>
+      </ng-container>
+      <div class="mb-2"></div>
+    </li>
+    </ng-container>
+  </ol>
+</ng-container>
+<ng-container *ngIf="subsectionContent.tehnicko_uputstvo">
+  <h3 class="display-5 page-title">Tehničko uputstvo</h3>
+  <hr class="my-3" />
+  <div [innerHTML]="subsectionContent.tehnicko_uputstvo"></div>
+  <div class="mb-2"></div>
+</ng-container>
+<ng-container *ngIf="subsectionContent.fajlovi && subsectionContent.fajlovi.length">
+  <h4 class="display-5 page-title">Resursi</h4>
+  <hr class="my-3" />
+  <ol>
+    <ng-container *ngFor="let fajl of subsectionContent.fajlovi">
+      <li>
+        <a [href]="'/assets/script-content/files/' + fajl.link">{{fajl.opis}}</a>
+        <div class="mb-2">
+        </div>
+      </li>
+    </ng-container>
+  </ol>
+</ng-container>
+<ng-container *ngIf="subsectionContent.pitanja">
+  <h3 class="display-5 page-title">Pitanja</h3>
+  <hr class="my-3" />
+  <ol>
+    <ng-container *ngFor="let pitanje of subsectionContent.pitanja">
+      <li>
+        <div [innerHTML]="pitanje"></div>
+        <div class="mb-2">
+        </div>
+      </li>
+    </ng-container>
+  </ol>
+  <div class="mb-2"></div>
+</ng-container>
+<ng-container *ngIf="subsectionContent.reference && subsectionContent.reference.length">
+  <h4 class="display-5 page-title">Reference</h4>
+  <hr class="my-3" />
+  <ol>
+    <ng-container *ngFor="let referenca of subsectionContent.reference">
+      <li>
+        <ng-container *ngIf="referenca.link; else SimpleText">
+          <a [href]="referenca.link" target="_blank" [innerHTML]="referenca.opis"></a>
+        </ng-container>
+        <ng-template #SimpleText>
+          <div [innerHTML]="referenca.opis"></div>
+        </ng-template>
+        <div class="mb-2"></div>
+      </li>
+    </ng-container>
+    </ol>
+</ng-container>
+<hr class="my-4" />

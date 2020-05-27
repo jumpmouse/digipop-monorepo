@@ -20,6 +20,7 @@ import { ProjectComponent } from './components/project/project.component';
     EditableProjectsListComponent
   ],
   exports: [
+    NgbAccordionModule,
     LoaderComponent,
     ProjectComponent,
     ProjectsListComponent,

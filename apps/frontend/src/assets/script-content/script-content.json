@@ -10,7 +10,7 @@
       "kratki_opis": "Sticanje znanja iz populacione ekologije životinja i obuka studenata da rešavaju konkretne probleme utvrđivanja ekološkog statusa i statusa ugroženosti i zaštite životinjskih populacija",
       "opis": "Student će razumeti značaj populacionog nivoa organizacije posebno u oblastima konkretne primene, razumeti kako su populacije organizovane i integrisane, znati da analiziraju, procene i primene populacione atribute i procese, znati da analiziraju i procene i mehanizme populacionog rasta i faktore populacione dinamike, znati da utvrde i analiziraju parametre populacionih interakcija i interpretiraju njihov uticaj na ekološki status populacija, umeti da formiraju, analiziraju i interpretiraju populacione modele i donose zaključke o ekološkom statusu i stanju ugroženosti na konkretnim primerima.",
       "link": "pez_populaciona-ekologija-zivotinja",
-      "URL_slike": "",
+      "URL_slike": "populaciona-ekologija-zivotinja.jpg",
       "redosled": 1,
       "oblasti": {
         "pez-I": {
@@ -18,7 +18,7 @@
           "naziv": "Demografija",
           "opis": "opis oblasti",
           "link": "pez-I_demografija",
-          "URL_slike": "/assets/script-content/images/demografija.jpg",
+          "URL_slike": "demografija.jpg",
           "redosled": 1,
           "redosled_programskih_celina": [
             "pez-I-1",
@@ -93,7 +93,7 @@
           "naziv": "Modeli rasta",
           "opis": "opis oblasti",
           "link": "pez-II_modeli-rasta",
-          "URL_slike": "/assets/script-content/images/modeli-rasta.gif",
+          "URL_slike": "modeli-rasta.gif",
           "redosled": 1,
           "redosled_programskih_celina": ["pez-II-1", "pez-II-2"],
           "programske_celine": {
@@ -123,127 +123,127 @@
       "kratki_opis": "Upoznavanje studenata sa raznovrsnoću ekoloških formi, trofičkih odnosa i biotičkih interakcija koje životinje ostvaruju u svojim populacijama i unutar zajednica",
       "opis": "Studenti će razumeti ulogu životinja u prirodi i značaj žaštite životinja u očuvanju biodiverziteta. Znaće da interpretiraju mehanizme delovanja ekoloških faktore važnih za opstanak životinja. Imaće jasan pregled raznovrsnosti ekoloških interakcija značajnih za životinje. Poznavaće osnovne populacione strategije.",
       "link": "oez_opsta-ekologija-zivotinja",
-      "URL_slike": "",
+      "URL_slike": "opsta-ekologija-zivotinja.jpg",
       "redosled": 2,
       "oblasti": {
-        "оez-I": {
-          "id": "оez-I",
+        "oez-I": {
+          "id": "oez-I",
           "naziv": "Ekološka valenca",
           "opis": "opis oblasti",
-          "link": "оez-I_ekoloska-valenca",
-          "URL_slike": "/assets/script-content/images/ekoloska-valenca.png",
+          "link": "oez-I_ekoloska-valenca",
+          "URL_slike": "ekoloska-valenca.png",
           "redosled": 1,
-          "redosled_programskih_celina": ["оez-I-1", "оez-I-2", "оez-I-3"],
+          "redosled_programskih_celina": ["oez-I-1", "oez-I-2", "oez-I-3"],
           "programske_celine": {
-            "оez-I-1": {
-              "id": "оez-I-1",
+            "oez-I-1": {
+              "id": "oez-I-1",
               "naziv": "Ekološka valenca",
-              "link": "оez-I-1_ekoloska-valenca",
+              "link": "oez-I-1_ekoloska-valenca",
               "URL_slike": "",
               "tekst": "uvodni tekst ovde",
               "redna_oznaka": "1"
             },
-            "оez-I-2": {
-              "id": "оez-I-2",
+            "oez-I-2": {
+              "id": "oez-I-2",
               "naziv": "Bivalence",
-              "link": "оez-I-2_bivalence",
+              "link": "oez-I-2_bivalence",
               "URL_slike": "",
               "tekst": "tekst",
               "redna_oznaka": "2"
             },
-            "оez-I-3": {
-              "id": "оez-I-3",
+            "oez-I-3": {
+              "id": "oez-I-3",
               "naziv": "Prostorno-vremenska varijabilnost ekoloških faktora",
-              "link": "оez-I-3_prostorno-vremenska-varijabilnost-ekoloskih-faktora",
+              "link": "oez-I-3_prostorno-vremenska-varijabilnost-ekoloskih-faktora",
               "URL_slike": "",
               "tekst": "tekst",
               "redna_oznaka": "3"
             }
           }
         },
-        "оez-II": {
-          "id": "оez-II",
+        "oez-II": {
+          "id": "oez-II",
           "naziv": "Ekološka niša",
           "opis": "opis oblasti",
-          "link": "оez-II_ekoloska-nisa",
-          "URL_slike": "/assets/script-content/images/ekoloska-nisa.png",
+          "link": "oez-II_ekoloska-nisa",
+          "URL_slike": "ekoloska-nisa.png",
           "redosled": 1,
-          "redosled_programskih_celina": ["оez-II-1", "оez-II-2"],
+          "redosled_programskih_celina": ["oez-II-1", "oez-II-2"],
           "programske_celine": {
-            "оez-II-1": {
-              "id": "оez-II-1",
+            "oez-II-1": {
+              "id": "oez-II-1",
               "naziv": "Korišćenje resursa dve vrste guštera",
-              "link": "оez-II-1_koriscenje-resursa-dve-vrste-gustera",
+              "link": "oez-II-1_koriscenje-resursa-dve-vrste-gustera",
               "URL_slike": "",
               "tekst": "uvodni tekst ovde",
               "redna_oznaka": "1"
             },
-            "оez-II-2": {
-              "id": "оez-II-2",
+            "oez-II-2": {
+              "id": "oez-II-2",
               "naziv": "Prostorno mapiranje ekoloških niša",
-              "link": "оez-II-2_prostorno-mapiranje-ekoloskih-nisa",
+              "link": "oez-II-2_prostorno-mapiranje-ekoloskih-nisa",
               "URL_slike": "",
               "tekst": "tekst",
               "redna_oznaka": "2"
             }
           }
         },
-        "оez-III": {
-          "id": "оez-III",
+        "oez-III": {
+          "id": "oez-III",
           "naziv": "Prostorni raspored jedinki u populaciji",
           "opis": "opis oblasti",
-          "link": "оez-III_prostorni-raspored-jedinki-u-populaciji",
-          "URL_slike": "/assets/script-content/images/prostorni-raspored.jpg",
+          "link": "oez-III_prostorni-raspored-jedinki-u-populaciji",
+          "URL_slike": "prostorni-raspored.jpg",
           "redosled": 1,
-          "redosled_programskih_celina": ["оez-III-1", "оez-III-2"],
+          "redosled_programskih_celina": ["oez-III-1", "oez-III-2"],
           "programske_celine": {
-            "оez-III-1": {
-              "id": "оez-III-1",
+            "oez-III-1": {
+              "id": "oez-III-1",
               "naziv": "Postupci za izračunavanje lokalnih abundanci",
-              "link": "оez-III-1_postupci-za-izracunavanje-lokalnih-abundanci",
+              "link": "oez-III-1_postupci-za-izracunavanje-lokalnih-abundanci",
               "URL_slike": "",
               "tekst": "uvodni tekst ovde",
               "redna_oznaka": "1"
             },
-            "оez-III-2": {
-              "id": "оez-III-2",
+            "oez-III-2": {
+              "id": "oez-III-2",
               "naziv": "Metoda najbližeg suseda",
-              "link": "оez-III-2_metoda-najblizeg-suseda",
+              "link": "oez-III-2_metoda-najblizeg-suseda",
               "URL_slike": "",
               "tekst": "tekst",
               "redna_oznaka": "2"
             }
           }
         },
-        "оez-IV": {
-          "id": "оez-IV",
+        "oez-IV": {
+          "id": "oez-IV",
           "naziv": "Kvantitativne metode za određivanje brojnosti jedinki u populaciji",
           "opis": "opis oblasti",
-          "link": "оez-IV_kvantitativne-metode-za-odredjivanje-brojnosti-jedinki-u-populaciji",
-          "URL_slike": "/assets/script-content/images/kvantitativne-metode.jpg",
+          "link": "oez-IV_kvantitativne-metode-za-odredjivanje-brojnosti-jedinki-u-populaciji",
+          "URL_slike": "kvantitativne-metode.jpg",
           "redosled": 1,
-          "redosled_programskih_celina": ["оez-IV-1", "оez-IV-2", "оez-IV-3"],
+          "redosled_programskih_celina": ["oez-IV-1", "oez-IV-2", "oez-IV-3"],
           "programske_celine": {
-            "оez-IV-1": {
-              "id": "оez-IV-1",
+            "oez-IV-1": {
+              "id": "oez-IV-1",
               "naziv": "Cenzus i metoda probnih površina",
-              "link": "оez-IV-1_cenzus-i-metoda-probnih-površina",
+              "link": "oez-IV-1_cenzus-i-metoda-probnih-površina",
               "URL_slike": "",
               "tekst": "uvodni tekst ovde",
               "redna_oznaka": "1"
             },
-            "оez-IV-2": {
-              "id": "оez-IV-2",
+            "oez-IV-2": {
+              "id": "oez-IV-2",
               "naziv": "Analiza plana uzorkovanja",
-              "link": "оez-IV-2_analiza-plana-uzorkovanja",
+              "link": "oez-IV-2_analiza-plana-uzorkovanja",
               "URL_slike": "",
               "tekst": "tekst",
               "redna_oznaka": "2"
             },
-            "оez-IV-3": {
-              "id": "оez-IV-3",
+            "oez-IV-3": {
+              "id": "oez-IV-3",
               "naziv": "Metode markiranja i ponovnog ulova",
-              "link": "оez-IV-3_metode-markiranja-i-ponovnog-ulova",
+              "link": "oez-IV-3_metode-markiranja-i-ponovnog-ulova",
               "URL_slike": "",
               "tekst": "tekst",
               "redna_oznaka": "3"

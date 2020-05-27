@@ -24,7 +24,8 @@ export class SectionComponent implements OnInit {
   subsectionContent: ProgramskaCelinaSadrzaj = {
     id: '',
     naziv: '',
-    tekst: ''
+    tekst: '',
+    zadaci: []
   };
   subsections: SimpleLinkObject[];
   fragment: string;
@@ -69,18 +70,19 @@ export class SectionComponent implements OnInit {
         );
       }
 
+      if (!this.subsections) {
+        return;
+      }
+
       if (!fragment) {
         this.router.navigate([], { fragment: this.subsections[0].fragment });
         return;
       }
 
-      console.log(fragment);
-      console.log(this.subsections);
       const subsectionsCount = this.subsections.length;
       const currentFragmentIndex = this.subsections.findIndex(
         subsection => subsection.fragment === fragment
       );
-      console.log(currentFragmentIndex);
       if (subsectionsCount && currentFragmentIndex !== -1) {
         if (currentFragmentIndex === subsectionsCount - 1) {
           this.nextFragment = undefined;
@@ -107,12 +109,23 @@ export class SectionComponent implements OnInit {
 
   private prepareSubsections(courseId: string, sectionId: string) {
     let sections;
+    console.log(
+      this.projectsService.oblasti,
+      this.projectsService.oblasti[courseId],
+      courseId,
+      sectionId
+    );
     for (const oblast of this.projectsService.oblasti[courseId]) {
+      console.log(oblast, oblast.id, sectionId, oblast.id === sectionId);
       if (oblast.id === sectionId) {
         sections = oblast.sections;
-      }
+        console.log(sections);
       break;
+      }
+      console.log(sections);
+
     }
+    console.log(sections);
     return sections;
   }
 }

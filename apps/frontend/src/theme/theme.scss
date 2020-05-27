@@ -30,14 +30,6 @@ body .ck.ck-content {
   }
 }
 
-/* stylelint-disable-next-line selector-no-qualifying-type */
-.accordion .card-header button.btn-link {
-  font-size: 1.25em;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-}
-
 .edit-form {
   width: 100%;
   max-width: 900px;
@@ -103,7 +95,12 @@ hr {
 }
 
 .page-title {
-  color: $dark-red;
+  &,
+  &:hover,
+  & button,
+  & button:hover {
+    color: $dark-red;
+  }
 }
 
 body nav.navbar {

@@ -53,18 +53,20 @@ export interface ProgramskaCelinaSadrzaj {
   naziv: string;
   tekst: string;
   zadaci?: Zadatak[];
+  tehnicko_uputstvo?: string;
+  pitanja?: string[];
+  fajlovi?: Referenca[];
   reference?: Referenca[];
 }
 
 export interface Zadatak {
-  opis?: string;
   tehnicki_opis?: string;
   zadatak: string;
 }
 
 export interface Referenca {
   opis: string;
-  link: string;
+  link?: string;
 }
 
 export interface SkriptaForEditing {

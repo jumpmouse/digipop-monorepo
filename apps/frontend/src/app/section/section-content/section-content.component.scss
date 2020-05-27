@@ -1,0 +1,19 @@
+@import '../../../theme/theme-variables';
+
+.section-subtitle {
+  color: $dark-red;
+  font-size: 1.2em;
+  text-decoration: underline;
+  line-height: 1.2em;
+}
+
+.manual-title {
+  color: $dark-red;
+  text-decoration: underline;
+  line-height: 1.2em;
+}
+
+.manual {
+  color: $dark;
+  text-decoration: none;
+}
